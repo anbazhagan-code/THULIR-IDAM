@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | THULIR.IDAM - Mental Health Counseling Coimbatore</title>
+    <meta name="description" content="Contact THULIR.IDAM for counseling appointments, program inquiries, and mental health support in Coimbatore. Call +91 7010669191 or email thuliridam2025@gmail.com">
+    <meta name="keywords" content="contact mental health counselor Coimbatore, counseling appointment booking, therapy inquiry, mental health support contact">
+    
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-form .form-control {
+            border-radius: 8px;
+            border: 1px solid #E5E7EB;
+            padding: 15px 20px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(93, 95, 239, 0.1);
+        }
+
+        .contact-form .form-control-lg {
+            padding: 18px 20px;
+        }
+
+        .contact-form label {
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .contact-form-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-method a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Map Styles */
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* FAQ Accordion Styles */
+        .accordion .card {
+            border: 1px solid #E5E7EB;
+            border-radius: 8px !important;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .accordion .card-header {
+            background: var(--white);
+            border: none;
+            padding: 0;
+        }
+
+        .accordion .btn-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 20px 25px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .accordion .btn-link:hover {
+            color: var(--primary);
+        }
+
+        .accordion .btn-link[aria-expanded="true"] i {
+            transform: rotate(180deg);
+        }
+
+        .accordion .btn-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion .card-body {
+            padding: 20px 25px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        /* Form Validation Styles */
+        .is-invalid {
+            border-color: #dc3545 !important;
+        }
+
+        .is-invalid:focus {
+            border-color: #dc3545 !important;
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Success Button State */
+        .btn-success {
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+        }
+
+        .btn-success:hover {
+            background-color: #218838 !important;
+            border-color: #1e7e34 !important;
+        }
+
+        /* Alert Styles */
+        .alert {
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .alert-success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .alert-danger {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        .alert .close {
+            color: inherit;
+        }
+
+        /* Responsive Styles for Contact Page */
+        @media (max-width: 768px) {
+            .contact-form-section {
+                padding: 25px;
+            }
+            
+            .contact-form .form-control-lg {
+                padding: 15px 20px;
+            }
+            
+            .contact-method {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-spa"></i>
+                    <span class="logo-main">THULIR</span>
+                    <span class="logo-dot">.</span>
+                    <span class="logo-sub">IDAM</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="services/index.html" id="servicesDropdown" 
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="services/counselling.html">Counselling</a>
+                                <a class="dropdown-item" href="services/bold-butterflies.html">Bold Butterflies</a>
+                                <a class="dropdown-item" href="services/paavai-mozhi.html">Paavai Mozhi</a>
+                                <a class="dropdown-item" href="services/the-roots.html">The Roots</a>
+                                <a class="dropdown-item" href="services/eap.html">Employee Assistance</a>
+                                <a class="dropdown-item" href="services/skill-lab.html">Skill Set Lab</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                            <a href="tel:+917010669191" class="btn btn-primary">
+                                <i class="fas fa-phone mr-2"></i> Call Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero py-5" style="background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);">
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 font-weight-bold mb-4">Get In Touch</h1>
+                    <p class="lead text-muted">We're here to support you on your journey to emotional wellbeing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Details -->
+    <section class="section contact-details py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="contact-info">
+                        <h2 class="mb-4">Contact Information</h2>
+                        <div class="contact-methods">
+                            <div class="contact-method d-flex mb-4">
+                                <div class="mr-4">
+                                    <i class="fas fa-phone fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Phone</h3>
+                                    <a href="tel:+917010669191" class="d-block h4 mb-2">+91 7010669191</a>
+                                    <p class="text-muted mb-0">Mon-Sat: 9:00 AM - 7:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method d-flex mb-4">
+                                <div class="mr-4">
+                                    <i class="fas fa-envelope fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Email</h3>
+                                    <a href="mailto:thuliridam2025@gmail.com" class="d-block h4 mb-2">thuliridam2025@gmail.com</a>
+                                    <p class="text-muted mb-0">Response within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method d-flex mb-4">
+                                <div class="mr-4">
+                                    <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Location</h3>
+                                    <p class="mb-1">Coimbatore, Tamil Nadu</p>
+                                    <p class="text-muted mb-0">India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method d-flex">
+                                <div class="mr-4">
+                                    <i class="fas fa-clock fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Working Hours</h3>
+                                    <p class="mb-1">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                    <p class="text-muted mb-0">Sunday: By Appointment Only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="contact-form-section bg-white p-4 p-lg-5 rounded shadow">
+                        <h2 class="mb-4">Schedule an Appointment</h2>
+                        <form id="appointmentForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name" class="font-weight-bold">Full Name *</label>
+                                    <input type="text" class="form-control form-control-lg" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group col-md-6">
+                                    <label for="email" class="font-weight-bold">Email Address *</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="phone" class="font-weight-bold">Phone Number *</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone" name="phone" required>
+                                </div>
+                                
+                                <div class="form-group col-md-6">
+                                    <label for="service" class="font-weight-bold">Service Interest *</label>
+                                    <select class="form-control form-control-lg" id="service" name="service" required>
+                                        <option value="">Select a service</option>
+                                        <option value="counselling">Individual Counseling</option>
+                                        <option value="bold-butterflies">Bold Butterflies (Student Support)</option>
+                                        <option value="paavai-mozhi">Paavai Mozhi (Women's Wellness)</option>
+                                        <option value="the-roots">The Roots (Parent Guidance)</option>
+                                        <option value="eap">Employee Assistance Program</option>
+                                        <option value="skill-lab">Skill Set Lab</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-date" class="font-weight-bold">Preferred Date</label>
+                                <input type="date" class="form-control form-control-lg" id="preferred-date" name="preferred-date">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="font-weight-bold">Message</label>
+                                <textarea class="form-control form-control-lg" id="message" name="message" rows="4" placeholder="Tell us about your concerns and goals..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg btn-block py-3">
+                                <i class="fas fa-paper-plane mr-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map-section py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5">Our Location</h2>
+            <div class="map-container rounded overflow-hidden shadow">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.981502524477!2d76.9477828152609!3d10.998634592188692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859b2c8e6c6bd%3A0x3c6b3c7c3c7c3c7c!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1628492387654!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section contact-faq py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5">Common Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div id="contactFAQ" class="accordion">
+                        <div class="card mb-3">
+                            <div class="card-header" id="faqHeading1">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" 
+                                            data-toggle="collapse" data-target="#faqCollapse1" 
+                                            aria-expanded="true" aria-controls="faqCollapse1">
+                                        How soon can I get an appointment?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#contactFAQ">
+                                <div class="card-body">
+                                    We typically schedule appointments within 24-48 hours of your inquiry. For urgent concerns, 
+                                    we offer same-day appointments based on availability.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-header" id="faqHeading2">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                                            data-toggle="collapse" data-target="#faqCollapse2" 
+                                            aria-expanded="false" aria-controls="faqCollapse2">
+                                        What should I expect in my first session?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#contactFAQ">
+                                <div class="card-body">
+                                    Your first session is an initial consultation where we'll discuss your concerns, 
+                                    understand your goals, and create a personalized therapy plan. It's a safe space 
+                                    to express yourself without judgment.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-header" id="faqHeading3">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                                            data-toggle="collapse" data-target="#faqCollapse3" 
+                                            aria-expanded="false" aria-controls="faqCollapse3">
+                                        Do you accept insurance?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-parent="#contactFAQ">
+                                <div class="card-body">
+                                    Currently, we operate on a self-pay basis. We offer flexible payment options and 
+                                    package discounts to make therapy accessible. We provide detailed receipts that 
+                                    you can submit to your insurance provider if they cover out-of-network mental health services.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-header" id="faqHeading4">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                                            data-toggle="collapse" data-target="#faqCollapse4" 
+                                            aria-expanded="false" aria-controls="faqCollapse4">
+                                        What is your cancellation policy?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4" data-parent="#contactFAQ">
+                                <div class="card-body">
+                                    We require 24 hours notice for cancellations or rescheduling. Late cancellations 
+                                    (less than 24 hours) may incur a cancellation fee. We understand emergencies happen, 
+                                    and we're flexible in such cases.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header" id="faqHeading5">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                                            data-toggle="collapse" data-target="#faqCollapse5" 
+                                            aria-expanded="false" aria-controls="faqCollapse5">
+                                        Do you offer online therapy sessions?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="faqCollapse5" class="collapse" aria-labelledby="faqHeading5" data-parent="#contactFAQ">
+                                <div class="card-body">
+                                    Yes, we offer both in-person sessions at our Coimbatore center and secure online 
+                                    counseling via video conferencing. Online sessions are convenient for clients 
+                                    who cannot visit in person or prefer virtual therapy.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-spa"></i>
+                            <div class="footer-logo-text">
+                                <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            A sanctuary for emotional wellbeing in Coimbatore, providing professional 
+                            mental health counseling and therapeutic programs since 2020.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services/index.html">Our Services</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Our Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="services/counselling.html">Individual Counseling</a></li>
+                            <li><a href="services/bold-butterflies.html">Student Support</a></li>
+                            <li><a href="services/paavai-mozhi.html">Women's Wellness</a></li>
+                            <li><a href="services/the-roots.html">Parent Guidance</a></li>
+                            <li><a href="services/eap.html">Corporate Programs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Coimbatore, Tamil Nadu, India</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+917010669191">+91 7010669191</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="mb-0">&copy; 2025 THULIR.IDAM. All rights reserved. | A Home For Your Inner Self</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cancellation-policy.html">Cancellation Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form Validation JS -->
+    <script src="js/form-validation.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
