@@ -1,8 +1,8 @@
 /* Custom Variables */
 :root {
-    --primary: #5D5FEF;
+    --primary: #B2CE3F;
     --primary-light: #E0E7FF;
-    --primary-dark: #4F46E5;
+    --primary-dark:     #B2CE3F;
     --secondary: #10B981;
     --accent: #F59E0B;
     --dark: #1F2937;
@@ -21,6 +21,15 @@
 .btn-primary:hover {
     background-color: var(--primary-dark) !important;
     border-color: var(--primary-dark) !important;
+}
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
 }
 
 /* Custom Classes */
@@ -231,11 +240,16 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.faq-question {
+.faq-item .card-header .btn{
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--dark);
     margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.btn.focus, .btn:focus{
+    box-shadow: none;
 }
 
 .faq-answer {
