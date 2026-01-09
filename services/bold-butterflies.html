@@ -3,447 +3,1329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Individual Counseling Services | THULIR.IDAM Coimbatore</title>
-    <meta name="description" content="Professional individual counseling services in Coimbatore for anxiety, depression, stress, relationship issues, and personal growth. Confidential therapy sessions.">
-    <meta name="keywords" content="individual counseling Coimbatore, therapy for anxiety, depression counseling, stress management, relationship counseling, personal growth therapy">
-    <!-- Head elements same as index.html -->
+    <title>Bold Butterflies | Student Mental Health & Academic Support | THULIR.IDAM</title>
+    <meta name="description" content="Transformative student support program in Coimbatore for academic stress, exam anxiety, career guidance, and teenage mental health.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* ===== BOLD BUTTERFLIES PREMIUM CSS ===== */
+        
+        :root {
+            --butterfly-primary: #FF6B8B;
+            --butterfly-secondary: #4ECDC4;
+            --butterfly-accent: #FFD166;
+            --butterfly-light: #FFF9F0;
+            --butterfly-dark: #2A2D43;
+        }
+        
+        /* Hero Section */
+        .bold-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #FF6B8B 0%, #FF8E53 100%);
+            position: relative;
+            overflow: hidden;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .butterfly-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .butterfly {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            animation: floatButterfly 15s linear infinite;
+        }
+        
+        @keyframes floatButterfly {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(100vw, -100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 25px 0;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #FFD166, #FF6B8B, #4ECDC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-box {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Program Features */
+        .program-section {
+            padding: 120px 0;
+            background: var(--butterfly-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-subtitle {
+            display: inline-block;
+            padding: 8px 25px;
+            background: rgba(255, 107, 139, 0.1);
+            color: var(--butterfly-primary);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--butterfly-dark);
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            height: 100%;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(255, 107, 139, 0.2);
+            border-color: var(--butterfly-primary);
+        }
+        
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FF6B8B, #FF8E53);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 10px 20px rgba(255, 107, 139, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(360deg);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--butterfly-dark);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+        
+        .feature-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--butterfly-primary);
+            font-weight: bold;
+        }
+        
+        /* Challenges Section */
+        .challenges-section {
+            padding: 120px 0;
+            background: white;
+        }
+        
+        .challenge-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--butterfly-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .challenge-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .challenge-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--butterfly-primary);
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--butterfly-light) 0%, #FFF5F7 100%);
+        }
+        
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 5rem;
+            color: var(--butterfly-primary);
+            opacity: 0.2;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 3px solid var(--butterfly-primary);
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Program Structure */
+        .structure-section {
+            padding: 120px 0;
+            background: white;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--butterfly-primary), var(--butterfly-secondary));
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-marker {
+            width: 30px;
+            height: 30px;
+            background: var(--butterfly-primary);
+            border: 5px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 0 3px var(--butterfly-primary);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--butterfly-primary), var(--butterfly-secondary));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+        
+        @keyframes moveBackground {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-buttons .btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin: 10px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--butterfly-primary);
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-outline-light {
+            border: 2px solid white;
+        }
+        
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--butterfly-primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                margin-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-description {
+                font-size: 1.1rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Custom Buttons */
+        .btn-butterfly {
+            background: linear-gradient(45deg, var(--butterfly-primary), var(--butterfly-secondary));
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.3);
+        }
+        
+        .btn-butterfly:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 139, 0.4);
+            color: white;
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Shine Effect */
+        .shine {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 30%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 70%
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header (same as index.html) -->
-     <header class="main-header">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top main-header">
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <i class="fas fa-spa logo-icon"></i>
-                    <div class="logo-text">
-                        <span class="logo-main">THULIR</span>
-                        <span class="logo-dot">.</span>
-                        <span class="logo-sub">IDAM</span>
-                    </div>
-                </a>
-                
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="services/index.html">Services <i class="fas fa-chevron-down"></i></a>
-                            <div class="dropdown-menu">
-                                <a href="services/counselling.html">Counselling</a>
-                                <a href="services/bold-butterflies.html">Bold Butterflies</a>
-                                <a href="services/paavai-mozhi.html">Paavai Mozhi</a>
-                                <a href="services/the-roots.html">The Roots</a>
-                                <a href="services/eap.html">Employee Assistance</a>
-                                <a href="services/skill-lab.html">Skill Set Lab</a>
-                            </div>
-                        </li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="tel:+917010669191" class="btn btn-primary btn-small">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-spa"></i>
+                <span class="logo-main">THULIR</span>
+                <span class="logo-dot">.</span>
+                <span class="logo-sub">IDAM</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="index.html">Services</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="counselling.html">Counseling</a>
+                            <a class="dropdown-item active" href="bold-butterflies.html">Bold Butterflies</a>
+                            <a class="dropdown-item" href="paavai-mozhi.html">Paavai Mozhi</a>
+                            <a class="dropdown-item" href="the-roots.html">The Roots</a>
+                            <a class="dropdown-item" href="eap.html">EAP</a>
+                            <a class="dropdown-item" href="skill-lab.html">Skill Lab</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                    <li class="nav-item ml-2">
+                        <a href="tel:+917010669191" class="btn btn-primary btn-butterfly">
+                            <i class="fas fa-phone mr-2"></i> Call Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
-    
-    <!-- Service Hero -->
-    <section class="service-hero counselling-hero">
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bold-hero">
+        <div class="butterfly-animation" id="butterflyContainer"></div>
+        
         <div class="container">
-            <div class="service-hero-content">
-                <h1 class="service-title">Individual Counseling</h1>
-                <p class="service-subtitle">Professional, confidential therapy for emotional wellbeing and personal growth</p>
-                <p class="service-description">Our individual counseling sessions provide a safe, supportive space to explore challenges, develop coping strategies, and work towards positive change in your life.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">
-                    <i class="fas fa-calendar-check"></i> Book Counseling Session
-                </a>
+            <div class="row align-items-center min-vh-80">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content">
+                        <span class="hero-badge animate__animated animate__pulse animate__infinite">
+                            <i class="fas fa-butterfly mr-2"></i>Exclusively for Students
+                        </span>
+                        
+                        <h1 class="hero-title mt-4">
+                            <span class="gradient-text">Bold Butterflies</span>
+                            <br>Student Empowerment Program
+                        </h1>
+                        
+                        <p class="hero-description">
+                            Transform academic stress into success! Our specialized program helps students 
+                            in Coimbatore conquer exam anxiety, build confidence, and navigate teenage years 
+                            with emotional intelligence and resilience.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-box">
+                                <span class="stat-number" data-count="95">0</span>
+                                <span class="stat-label">Stress Reduction</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-count="1000">0</span>
+                                <span class="stat-label">Students Transformed</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-count="85">0</span>
+                                <span class="stat-label">Academic Improvement</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <a href="#enroll" class="btn btn-primary btn-lg mr-3 animate__animated animate__pulse animate__delay-2s">
+                                <i class="fas fa-user-graduate mr-2"></i>Enroll Now
+                            </a>
+                            <a href="#programs" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-play-circle mr-2"></i>Explore Program
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Details -->
-    <section class="service-details">
+    <!-- Program Features -->
+    <section class="program-section" id="programs">
         <div class="container">
-            <div class="service-content">
-                <div class="service-text">
-                    <h2>Comprehensive Counseling Support</h2>
-                    <p>Our individual counseling services are designed to help you navigate life's challenges, from everyday stress to more complex emotional issues. We provide evidence-based therapeutic support tailored to your unique needs.</p>
+            <div class="section-header">
+                <span class="section-subtitle">Why Choose Us</span>
+                <h2 class="section-title">Student <span class="gradient-text">Transformation</span> Features</h2>
+                <p class="text-muted">Comprehensive support for academic and emotional success</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card animate__animated" data-animation="fade-up">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Academic Stress Management</h3>
+                        <p>Learn proven techniques to handle exam pressure, study stress, and academic anxiety effectively.</p>
+                        <ul class="feature-list">
+                            <li>Exam Anxiety Reduction</li>
+                            <li>Study Skill Enhancement</li>
+                            <li>Time Management Mastery</li>
+                            <li>Memory Improvement Techniques</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card animate__animated" data-animation="fade-up" data-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Social & Peer Support</h3>
+                        <p>Build healthy relationships and develop social skills for better peer interactions.</p>
+                        <ul class="feature-list">
+                            <li>Peer Pressure Handling</li>
+                            <li>Communication Skills</li>
+                            <li>Friendship Building</li>
+                            <li>Social Anxiety Management</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card animate__animated" data-animation="fade-up" data-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Career Clarity & Guidance</h3>
+                        <p>Discover your strengths and find direction for future academic and career choices.</p>
+                        <ul class="feature-list">
+                            <li>Career Assessment</li>
+                            <li>Strength Discovery</li>
+                            <li>Goal Setting</li>
+                            <li>Future Planning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card animate__animated" data-animation="fade-up" data-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Emotional Intelligence</h3>
+                        <p>Develop self-awareness and emotional regulation skills for better mental health.</p>
+                        <ul class="feature-list">
+                            <li>Emotion Recognition</li>
+                            <li>Stress Coping Strategies</li>
+                            <li>Self-Esteem Building</li>
+                            <li>Mindfulness Practices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card animate__animated" data-animation="fade-up" data-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Digital Wellness</h3>
+                        <p>Manage screen time and develop healthy digital habits for balanced lifestyle.</p>
+                        <ul class="feature-list">
+                            <li>Digital Detox Strategies</li>
+                            <li>Social Media Balance</li>
+                            <li>Online Safety</li>
+                            <li>Cyber Bullying Prevention</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card animate__animated" data-animation="fade-up" data-delay="500">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Parent-Child Bonding</h3>
+                        <p>Improve family communication and understanding between students and parents.</p>
+                        <ul class="feature-list">
+                            <li>Family Workshops</li>
+                            <li>Communication Bridges</li>
+                            <li>Conflict Resolution</li>
+                            <li>Mutual Understanding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges We Address -->
+    <section class="challenges-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">We Understand</span>
+                <h2 class="section-title">Common Student <span class="gradient-text">Challenges</span></h2>
+                <p class="text-muted">These are the issues we help students overcome every day</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Academic Pressure & Exam Stress</h4>
+                        <p>Dealing with competitive exams (NEET/JEE), board exams, and constant academic expectations.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-gradient" style="width: 85%; background: linear-gradient(90deg, #FF6B8B, #FF8E53);"></div>
+                        </div>
+                        <small class="text-muted">85% of students report this challenge</small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h4>Peer Pressure & Social Anxiety</h4>
+                        <p>Navigating friendships, social circles, and dealing with comparison and bullying.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-gradient" style="width: 75%; background: linear-gradient(90deg, #4ECDC4, #44A08D);"></div>
+                        </div>
+                        <small class="text-muted">75% struggle with social pressures</small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h4>Career Confusion & Future Anxiety</h4>
+                        <p>Uncertainty about career choices, stream selection, and future planning.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-gradient" style="width: 70%; background: linear-gradient(90deg, #FFD166, #FFB347);"></div>
+                        </div>
+                        <small class="text-muted">70% face career confusion</small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Digital Addiction & Screen Fatigue</h4>
+                        <p>Excessive screen time, social media addiction, and online distractions affecting studies.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-gradient" style="width: 80%; background: linear-gradient(90deg, #9D50BB, #6E48AA);"></div>
+                        </div>
+                        <small class="text-muted">80% battle digital addiction</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Structure -->
+    <section class="structure-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Approach</span>
+                <h2 class="section-title">Program <span class="gradient-text">Structure</span></h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 1: Assessment & Foundation</h4>
+                        <p>Comprehensive evaluation of academic stress, emotional state, and personal goals.</p>
+                        <ul>
+                            <li>Initial Assessment Session</li>
+                            <li>Strength Discovery</li>
+                            <li>Goal Setting Workshop</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 2: Skill Building</h4>
+                        <p>Interactive workshops and sessions to develop essential life and academic skills.</p>
+                        <ul>
+                            <li>Stress Management Techniques</li>
+                            <li>Study Skill Workshops</li>
+                            <li>Emotional Intelligence Training</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 3: Application & Practice</h4>
+                        <p>Practical application of learned skills with ongoing support and guidance.</p>
+                        <ul>
+                            <li>Real-life Scenario Practice</li>
+                            <li>Progress Monitoring</li>
+                            <li>Adjustment Sessions</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 4: Growth & Independence</h4>
+                        <p>Building confidence and independence for long-term success and wellbeing.</p>
+                        <ul>
+                            <li>Confidence Building</li>
+                            <li>Future Planning</li>
+                            <li>Graduation & Follow-up</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Success Stories</span>
+                <h2 class="section-title">Student <span class="gradient-text">Testimonials</span></h2>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">
+                                    "Bold Butterflies transformed my approach to studies. I went from constant anxiety 
+                                    during exams to scoring 95% in my boards. The stress management techniques were life-changing!"
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Student">
+                                    </div>
+                                    <div>
+                                        <h5>Priya M.</h5>
+                                        <span>Class 12 Student | 95% in Boards</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">
+                                    "The career guidance sessions helped me discover my passion. I was confused between 
+                                    engineering and design, but now I'm confidently pursuing my dream career in architecture."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student">
+                                    </div>
+                                    <div>
+                                        <h5>Arun K.</h5>
+                                        <span>NEET Aspirant | Now Architecture Student</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">
+                                    "As a parent, I saw remarkable changes in my son's confidence and communication skills. 
+                                    The family workshops helped us understand each other better. Highly recommended!"
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Parent">
+                                    </div>
+                                    <div>
+                                        <h5>Lakshmi R.</h5>
+                                        <span>Parent of Class 10 Student</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div class="service-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Personalized Approach</h3>
-                                <p>Therapy plans customized to your specific needs and goals</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Evidence-Based Methods</h3>
-                                <p>Utilizing proven therapeutic techniques and approaches</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Confidential Sessions</h3>
-                                <p>Complete privacy in a safe, non-judgmental environment</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Flexible Scheduling</h3>
-                                <p>Session times that work with your schedule and commitments</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                
-                <div class="service-image">
-                    <img src="images/counseling-session.jpg" alt="Individual Counseling Session" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Areas of Focus -->
-    <section class="section focus-areas">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Areas We Support</h2>
-                <p class="section-subtitle">Comprehensive counseling for various emotional and mental health concerns</p>
-            </div>
-            
-            <div class="focus-grid">
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Anxiety & Stress</h3>
-                    <ul>
-                        <li>Generalized Anxiety</li>
-                        <li>Panic Attacks</li>
-                        <li>Work Stress</li>
-                        <li>Social Anxiety</li>
-                    </ul>
-                </div>
-                
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Depression & Mood</h3>
-                    <ul>
-                        <li>Depressive Episodes</li>
-                        <li>Mood Swings</li>
-                        <li>Low Motivation</li>
-                        <li>Emotional Numbness</li>
-                    </ul>
-                </div>
-                
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Relationship Issues</h3>
-                    <ul>
-                        <li>Communication Problems</li>
-                        <li>Family Conflicts</li>
-                        <li>Breakup Recovery</li>
-                        <li>Boundary Setting</li>
-                    </ul>
-                </div>
-                
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <h3>Personal Growth</h3>
-                    <ul>
-                        <li>Self-Esteem Building</li>
-                        <li>Life Transitions</li>
-                        <li>Career Guidance</li>
-                        <li>Identity Exploration</li>
-                    </ul>
-                </div>
-                
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <h3>Sleep & Relaxation</h3>
-                    <ul>
-                        <li>Insomnia</li>
-                        <li>Sleep Anxiety</li>
-                        <li>Relaxation Techniques</li>
-                        <li>Mindfulness Practice</li>
-                    </ul>
-                </div>
-                
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Coping Skills</h3>
-                    <ul>
-                        <li>Anger Management</li>
-                        <li>Emotional Regulation</li>
-                        <li>Problem Solving</li>
-                        <li>Resilience Building</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="section process-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Counseling Process</h2>
-                <p class="section-subtitle">A structured approach to your emotional wellbeing journey</p>
-            </div>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Initial Consultation</h3>
-                    <p>45-minute session to understand your concerns and goals</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Assessment</h3>
-                    <p>Comprehensive evaluation to create your personalized therapy plan</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Therapy Sessions</h3>
-                    <p>Weekly or bi-weekly 50-minute sessions focusing on your goals</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Progress Review</h3>
-                    <p>Regular check-ins to track progress and adjust approach as needed</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3>Maintenance & Growth</h3>
-                    <p>Continued support for sustained wellbeing and personal growth</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="section pricing-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Session Packages</h2>
-                <p class="section-subtitle">Flexible options to suit your needs and budget</p>
-            </div>
-            
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Single Session</h3>
-                        <div class="price">₹1,500</div>
-                        <p>per session</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 50-minute session</li>
-                        <li><i class="fas fa-check"></i> Personalized approach</li>
-                        <li><i class="fas fa-check"></i> Flexible scheduling</li>
-                        <li><i class="fas fa-check"></i> Progress assessment</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Book Now</a>
-                </div>
-                
-                <div class="pricing-card popular">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>4-Session Package</h3>
-                        <div class="price">₹5,400</div>
-                        <p>Save 10% (₹1,350/session)</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 4 x 50-minute sessions</li>
-                        <li><i class="fas fa-check"></i> Comprehensive assessment</li>
-                        <li><i class="fas fa-check"></i> Personalized therapy plan</li>
-                        <li><i class="fas fa-check"></i> Between-session support</li>
-                        <li><i class="fas fa-check"></i> Progress reports</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Book Package</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>8-Session Package</h3>
-                        <div class="price">₹9,600</div>
-                        <p>Save 20% (₹1,200/session)</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 8 x 50-minute sessions</li>
-                        <li><i class="fas fa-check"></i> Extended therapy program</li>
-                        <li><i class="fas fa-check"></i> In-depth assessment</li>
-                        <li><i class="fas fa-check"></i> Email support included</li>
-                        <li><i class="fas fa-check"></i> Custom resources</li>
-                        <li><i class="fas fa-check"></i> Family session included</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Book Package</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Counseling FAQs</h2>
-                <p class="section-subtitle">Common questions about individual counseling</p>
-            </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3 class="faq-question">How long does each counseling session last?</h3>
-                    <p class="faq-answer">Each individual counseling session lasts 50 minutes. The initial consultation may extend to 60 minutes to allow for comprehensive assessment.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">How many sessions will I need?</h3>
-                    <p class="faq-answer">The number of sessions varies based on individual needs. Some clients see progress in 4-6 sessions, while others may benefit from longer-term therapy. We'll discuss this during your initial consultation.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">Is online counseling available?</h3>
-                    <p class="faq-answer">Yes, we offer both in-person sessions at our Coimbatore center and secure online counseling via video conferencing for your convenience.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">What if I need to cancel or reschedule?</h3>
-                    <p class="faq-answer">We understand that schedules can change. You can reschedule or cancel your session with 24 hours notice without any penalty.</p>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="contact.html" class="btn btn-primary btn-large">
-                    <i class="fas fa-comment-dots"></i> Have More Questions? Contact Us
-                </a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section class="cta-section" id="enroll">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Begin Your Healing Journey?</h2>
-                <p class="cta-description">Take the first step towards emotional wellbeing with our compassionate counseling team</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-calendar-alt"></i> Book Your First Session
-                    </a>
-                    <a href="tel:+917010669191" class="btn btn-secondary btn-large">
-                        <i class="fas fa-phone"></i> Call: +91 7010669191
-                    </a>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="cta-title">Ready to Transform Your Academic Journey?</h2>
+                    
+                    <p class="cta-description">
+                        Join hundreds of students in Coimbatore who have transformed their academic experience 
+                        and emotional wellbeing with our Bold Butterflies program.
+                    </p>
+                    
+                    <div class="cta-features mb-5">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="feature">
+                                    <i class="fas fa-calendar-check fa-2x mb-3"></i>
+                                    <h5>Flexible Schedule</h5>
+                                    <small>Weekend & Holiday Batches Available</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="feature">
+                                    <i class="fas fa-users fa-2x mb-3"></i>
+                                    <h5>Group & Individual</h5>
+                                    <small>Personalized + Peer Learning</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="feature">
+                                    <i class="fas fa-laptop-house fa-2x mb-3"></i>
+                                    <h5>Online & Offline</h5>
+                                    <small>Learn from Anywhere</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="../contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-user-graduate mr-2"></i>Enroll Now
+                        </a>
+                        <a href="tel:+917010669191" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone mr-2"></i>Call for Inquiry
+                        </a>
+                    </div>
+                    
+                    <p class="mt-4">
+                        <small><i class="fas fa-info-circle mr-2"></i>Limited seats per batch | Age groups: 13-18 years</small>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
-     <footer class="main-footer">
+    <!-- Footer -->
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="footer-brand">
                         <i class="fas fa-spa"></i>
-                        <div class="footer-logo-text">
+                        <div>
                             <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
                         </div>
                     </div>
                     <p class="footer-description">
-                        A sanctuary for emotional wellbeing in Coimbatore, providing professional 
-                        mental health counseling and therapeutic programs since 2020.
+                        Empowering students in Coimbatore with emotional intelligence and academic excellence since 2020.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h5>Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services/index.html">Our Services</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="index.html">Services</a></li>
+                        <li><a href="../programs.html">Programs</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Our Services</h3>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5>Student Programs</h5>
                     <ul class="footer-links">
-                        <li><a href="services/counselling.html">Individual Counseling</a></li>
-                        <li><a href="services/bold-butterflies.html">Student Support</a></li>
-                        <li><a href="services/paavai-mozhi.html">Women's Wellness</a></li>
-                        <li><a href="services/the-roots.html">Parent Guidance</a></li>
-                        <li><a href="services/eap.html">Corporate Programs</a></li>
+                        <li><a href="bold-butterflies.html" class="active">Bold Butterflies</a></li>
+                        <li><a href="counselling.html">Student Counseling</a></li>
+                        <li><a href="skill-lab.html">Skill Development</a></li>
+                        <li><a href="../programs.html">Workshops</a></li>
+                        <li><a href="../contact.html">Parent Consultation</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
                     <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Coimbatore, Tamil Nadu, India</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+917010669191">+91 7010669191</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
-                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+917010669191">+91 7010669191</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9 AM - 7 PM</li>
+                        <li><i class="fas fa-user-graduate"></i> Special Student Hours: 3 PM - 7 PM</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 THULIR.IDAM. All rights reserved. | A Home For Your Inner Self</p>
-                    <div class="footer-bottom-links">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="cancellation-policy.html">Cancellation Policy</a>
-                    </div>
+                <p>&copy; 2025 THULIR.IDAM Bold Butterflies. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../cancellation.html">Cancellation Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script src="../js/main.js"></script>
+    <script>
+        // ===== BOLD BUTTERFLIES JAVASCRIPT =====
+        
+        $(document).ready(function() {
+            // Create floating butterflies
+            createButterflies();
+            
+            // Animated counter
+            function animateCounter() {
+                $('.stat-number').each(function() {
+                    var $this = $(this);
+                    var countTo = parseInt($this.data('count'));
+                    
+                    if ($this.visible(true)) {
+                        $({ countNum: 0 }).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function() {
+                                $this.text(this.countNum + '%');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            // Initialize counter
+            animateCounter();
+            $(window).on('scroll', animateCounter);
+            
+            // Back to top button
+            $('#backToTop').click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+            
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#backToTop').fadeIn();
+                } else {
+                    $('#backToTop').fadeOut();
+                }
+            });
+            
+            // Smooth scroll
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
+            
+            // Animate feature cards on scroll
+            function animateCards() {
+                $('.feature-card[data-animation]').each(function() {
+                    var element = $(this);
+                    var animation = element.data('animation');
+                    var delay = element.data('delay') || 0;
+                    
+                    if (element.visible(true)) {
+                        setTimeout(function() {
+                            element.addClass('animate__animated animate__' + animation);
+                        }, delay);
+                    }
+                });
+            }
+            
+            // Initialize animations
+            animateCards();
+            $(window).on('scroll', animateCards);
+            
+            // Testimonial carousel auto-play
+            $('#testimonialCarousel').carousel({
+                interval: 5000,
+                pause: 'hover'
+            });
+            
+            // Add hover effect to feature cards
+            $('.feature-card').hover(
+                function() {
+                    $(this).css('transform', 'translateY(-15px)');
+                },
+                function() {
+                    $(this).css('transform', 'translateY(0)');
+                }
+            );
+            
+            // Add parallax effect to butterflies
+            $(window).scroll(function() {
+                var scrolled = $(this).scrollTop();
+                $('.butterfly').each(function(index) {
+                    $(this).css('transform', 'translateY(' + (scrolled * 0.3) + 'px)');
+                });
+            });
+        });
+        
+        // Create floating butterflies
+        function createButterflies() {
+            var container = $('#butterflyContainer');
+            var butterflyCount = 15;
+            
+            for (var i = 0; i < butterflyCount; i++) {
+                var butterfly = $('<div class="butterfly"><i class="fas fa-butterfly"></i></div>');
+                
+                // Random position
+                var left = Math.random() * 100;
+                var top = Math.random() * 100;
+                
+                // Random size
+                var size = 1 + Math.random() * 1.5;
+                
+                // Random animation delay
+                var delay = Math.random() * 10;
+                var duration = 10 + Math.random() * 10;
+                
+                // Random color
+                var colors = ['#FF6B8B', '#FFD166', '#4ECDC4', '#FFFFFF'];
+                var color = colors[Math.floor(Math.random() * colors.length)];
+                
+                butterfly.css({
+                    left: left + '%',
+                    top: top + '%',
+                    fontSize: (size * 1.5) + 'rem',
+                    color: color,
+                    opacity: 0.3 + Math.random() * 0.4,
+                    animationDelay: delay + 's',
+                    animationDuration: duration + 's'
+                });
+                
+                container.append(butterfly);
+            }
+        }
+        
+        // Visibility check function
+        $.fn.visible = function(partial) {
+            var $t = $(this),
+                $w = $(window),
+                viewTop = $w.scrollTop(),
+                viewBottom = viewTop + $w.height(),
+                _top = $t.offset().top,
+                _bottom = _top + $t.height(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+            
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+        
+        // Add some interactive effects
+        $(document).ready(function() {
+            // Add click animation to buttons
+            $('.btn').on('click', function() {
+                $(this).addClass('animate__animated animate__pulse');
+                setTimeout(() => {
+                    $(this).removeClass('animate__animated animate__pulse');
+                }, 1000);
+            });
+            
+            // Add scroll reveal animation
+            function revealOnScroll() {
+                $('.feature-card, .challenge-card, .timeline-item').each(function() {
+                    if ($(this).visible(true)) {
+                        $(this).addClass('animate__animated animate__fadeIn');
+                    }
+                });
+            }
+            
+            revealOnScroll();
+            $(window).on('scroll', revealOnScroll);
+        });
+    </script>
 </body>
 </html>

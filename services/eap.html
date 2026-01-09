@@ -3,447 +3,1030 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Individual Counseling Services | THULIR.IDAM Coimbatore</title>
-    <meta name="description" content="Professional individual counseling services in Coimbatore for anxiety, depression, stress, relationship issues, and personal growth. Confidential therapy sessions.">
-    <meta name="keywords" content="individual counseling Coimbatore, therapy for anxiety, depression counseling, stress management, relationship counseling, personal growth therapy">
-    <!-- Head elements same as index.html -->
+    <title>Employee Assistance Program | Corporate Wellness | THULIR.IDAM</title>
+    <meta name="description" content="Comprehensive Employee Assistance Program in Coimbatore. Workplace mental health, stress management, and organizational wellbeing solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* ===== EAP PREMIUM CSS ===== */
+        :root {
+            --eap-primary: #2196F3;
+            --eap-secondary: #64B5F6;
+            --eap-accent: #4CAF50;
+            --eap-light: #E3F2FD;
+            --eap-dark: #1565C0;
+            --eap-gray: #546E7A;
+        }
+        
+        /* Hero Section */
+        .eap-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .network-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .network-node {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--eap-primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulseNode 2s infinite;
+        }
+        
+        @keyframes pulseNode {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.5); opacity: 0.6; }
+        }
+        
+        .eap-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 25px;
+            background: rgba(33, 150, 243, 0.1);
+            color: var(--eap-dark);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border: 1px solid rgba(33, 150, 243, 0.2);
+            animation: eapPulse 3s infinite;
+        }
+        
+        @keyframes eapPulse {
+            0%, 100% { 
+                transform: scale(1);
+                background: rgba(33, 150, 243, 0.1);
+            }
+            50% { 
+                transform: scale(1.03);
+                background: rgba(33, 150, 243, 0.15);
+            }
+        }
+        
+        .eap-title {
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 25px 0;
+            color: var(--eap-dark);
+        }
+        
+        .eap-gradient {
+            background: linear-gradient(45deg, var(--eap-primary), var(--eap-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .eap-subtitle {
+            font-size: 1.3rem;
+            color: #546E7A;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--eap-primary);
+            display: block;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            padding: 8px 25px;
+            background: rgba(33, 150, 243, 0.1);
+            color: var(--eap-dark);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--eap-dark);
+            margin-bottom: 20px;
+        }
+        
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--eap-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--eap-primary), var(--eap-accent));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(33, 150, 243, 0.15);
+            border-color: rgba(33, 150, 243, 0.1);
+        }
+        
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--eap-light), white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
+            color: var(--eap-primary);
+            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--eap-primary), var(--eap-secondary));
+            color: white;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--eap-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--eap-light) 0%, #F5F9FF 100%);
+        }
+        
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--eap-primary), var(--eap-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        /* Implementation Section */
+        .implementation-section {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--eap-primary), var(--eap-accent));
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-marker {
+            width: 30px;
+            height: 30px;
+            background: var(--eap-primary);
+            border: 5px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 0 3px var(--eap-primary);
+        }
+        
+        /* CTA Section */
+        .eap-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--eap-primary), var(--eap-dark));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .eap-cta:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Custom Buttons */
+        .btn-eap {
+            background: linear-gradient(45deg, var(--eap-primary), var(--eap-secondary));
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+        }
+        
+        .btn-eap:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(33, 150, 243, 0.4);
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .eap-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                margin-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .eap-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .eap-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .eap-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header (same as index.html) -->
-     <header class="main-header">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top main-header">
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <i class="fas fa-spa logo-icon"></i>
-                    <div class="logo-text">
-                        <span class="logo-main">THULIR</span>
-                        <span class="logo-dot">.</span>
-                        <span class="logo-sub">IDAM</span>
-                    </div>
-                </a>
-                
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="services/index.html">Services <i class="fas fa-chevron-down"></i></a>
-                            <div class="dropdown-menu">
-                                <a href="services/counselling.html">Counselling</a>
-                                <a href="services/bold-butterflies.html">Bold Butterflies</a>
-                                <a href="services/paavai-mozhi.html">Paavai Mozhi</a>
-                                <a href="services/the-roots.html">The Roots</a>
-                                <a href="services/eap.html">Employee Assistance</a>
-                                <a href="services/skill-lab.html">Skill Set Lab</a>
-                            </div>
-                        </li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="tel:+917010669191" class="btn btn-primary btn-small">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Service Hero -->
-    <section class="service-hero counselling-hero">
-        <div class="container">
-            <div class="service-hero-content">
-                <h1 class="service-title">Individual Counseling</h1>
-                <p class="service-subtitle">Professional, confidential therapy for emotional wellbeing and personal growth</p>
-                <p class="service-description">Our individual counseling sessions provide a safe, supportive space to explore challenges, develop coping strategies, and work towards positive change in your life.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">
-                    <i class="fas fa-calendar-check"></i> Book Counseling Session
-                </a>
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-spa"></i>
+                <span class="logo-main">THULIR</span>
+                <span class="logo-dot">.</span>
+                <span class="logo-sub">IDAM</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="index.html">Services</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="counselling.html">Counseling</a>
+                            <a class="dropdown-item" href="bold-butterflies.html">Bold Butterflies</a>
+                            <a class="dropdown-item" href="paavai-mozhi.html">Paavai Mozhi</a>
+                            <a class="dropdown-item" href="the-roots.html">The Roots</a>
+                            <a class="dropdown-item active" href="eap.html">EAP</a>
+                            <a class="dropdown-item" href="skill-lab.html">Skill Lab</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                    <li class="nav-item ml-2">
+                        <a href="tel:+917010669191" class="btn btn-primary btn-eap">
+                            <i class="fas fa-phone mr-2"></i> Call Now
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Service Details -->
-    <section class="service-details">
+    <!-- Hero Section -->
+    <section class="eap-hero">
+        <div class="network-animation" id="networkContainer"></div>
+        
         <div class="container">
-            <div class="service-content">
-                <div class="service-text">
-                    <h2>Comprehensive Counseling Support</h2>
-                    <p>Our individual counseling services are designed to help you navigate life's challenges, from everyday stress to more complex emotional issues. We provide evidence-based therapeutic support tailored to your unique needs.</p>
-                    
-                    <div class="service-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Personalized Approach</h3>
-                                <p>Therapy plans customized to your specific needs and goals</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <span class="eap-badge">
+                            <i class="fas fa-briefcase mr-2"></i>Corporate Wellness Program
+                        </span>
+                        
+                        <h1 class="eap-title mt-4">
+                            <span class="eap-gradient">Employee Assistance</span>
+                            <br>Program (EAP)
+                        </h1>
+                        
+                        <p class="eap-subtitle">
+                            Comprehensive workplace mental health solutions designed to enhance employee wellbeing, 
+                            productivity, and organizational culture. Professional support for emotional, personal, and work-related challenges.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">40%</span>
+                                <span>Productivity Increase</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">60%</span>
+                                <span>Stress Reduction</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">75%</span>
+                                <span>Employee Retention</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span>Companies Served</span>
                             </div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Evidence-Based Methods</h3>
-                                <p>Utilizing proven therapeutic techniques and approaches</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Confidential Sessions</h3>
-                                <p>Complete privacy in a safe, non-judgmental environment</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h3>Flexible Scheduling</h3>
-                                <p>Session times that work with your schedule and commitments</p>
-                            </div>
+                        
+                        <div class="mt-5">
+                            <a href="#services" class="btn btn-eap btn-lg mr-3 animate__animated animate__pulse animate__delay-2s">
+                                <i class="fas fa-chart-line mr-2"></i>View Solutions
+                            </a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-file-contract mr-2"></i>Request Proposal
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="service-image">
-                    <img src="images/counseling-session.jpg" alt="Individual Counseling Session" loading="lazy">
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <div class="corporate-icons">
+                            <div class="corporate-icon floating" style="animation-delay: 0s;">
+                                <i class="fas fa-users fa-3x" style="color: var(--eap-primary);"></i>
+                            </div>
+                            <div class="corporate-icon floating" style="animation-delay: 1s;">
+                                <i class="fas fa-chart-pie fa-3x" style="color: var(--eap-accent);"></i>
+                            </div>
+                            <div class="corporate-icon floating" style="animation-delay: 2s;">
+                                <i class="fas fa-handshake fa-3x" style="color: var(--eap-secondary);"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Areas of Focus -->
-    <section class="section focus-areas">
+    <!-- Services Section -->
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Areas We Support</h2>
-                <p class="section-subtitle">Comprehensive counseling for various emotional and mental health concerns</p>
+                <span class="section-tag">Our Solutions</span>
+                <h2 class="section-title">Comprehensive <span class="eap-gradient">EAP Services</span></h2>
+                <p class="section-description">
+                    Tailored workplace wellness programs designed to address diverse organizational needs
+                </p>
             </div>
             
-            <div class="focus-grid">
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-brain"></i>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Workplace Stress Management</h3>
+                        <p>Evidence-based programs to reduce workplace stress, prevent burnout, and enhance coping mechanisms.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-eap">Learn More</a>
+                        </div>
                     </div>
-                    <h3>Anxiety & Stress</h3>
-                    <ul>
-                        <li>Generalized Anxiety</li>
-                        <li>Panic Attacks</li>
-                        <li>Work Stress</li>
-                        <li>Social Anxiety</li>
-                    </ul>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-cloud"></i>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Leadership Mental Health</h3>
+                        <p>Executive coaching and leadership development focused on emotional intelligence and stress management.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-eap">Learn More</a>
+                        </div>
                     </div>
-                    <h3>Depression & Mood</h3>
-                    <ul>
-                        <li>Depressive Episodes</li>
-                        <li>Mood Swings</li>
-                        <li>Low Motivation</li>
-                        <li>Emotional Numbness</li>
-                    </ul>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-heart"></i>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Team Building Workshops</h3>
+                        <p>Interactive sessions to improve team dynamics, communication, and collaborative problem-solving.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-eap">Learn More</a>
+                        </div>
                     </div>
-                    <h3>Relationship Issues</h3>
-                    <ul>
-                        <li>Communication Problems</li>
-                        <li>Family Conflicts</li>
-                        <li>Breakup Recovery</li>
-                        <li>Boundary Setting</li>
-                    </ul>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-user-circle"></i>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Work-Life Balance Programs</h3>
+                        <p>Strategies and workshops to help employees maintain healthy boundaries between work and personal life.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-eap">Learn More</a>
+                        </div>
                     </div>
-                    <h3>Personal Growth</h3>
-                    <ul>
-                        <li>Self-Esteem Building</li>
-                        <li>Life Transitions</li>
-                        <li>Career Guidance</li>
-                        <li>Identity Exploration</li>
-                    </ul>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-bed"></i>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Counseling Support</h3>
+                        <p>Confidential counseling services accessible round-the-clock for employees and their families.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-eap">Learn More</a>
+                        </div>
                     </div>
-                    <h3>Sleep & Relaxation</h3>
-                    <ul>
-                        <li>Insomnia</li>
-                        <li>Sleep Anxiety</li>
-                        <li>Relaxation Techniques</li>
-                        <li>Mindfulness Practice</li>
-                    </ul>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-tools"></i>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Wellness Analytics</h3>
+                        <p>Data-driven insights and reporting on employee wellbeing metrics and program effectiveness.</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-eap">Learn More</a>
+                        </div>
                     </div>
-                    <h3>Coping Skills</h3>
-                    <ul>
-                        <li>Anger Management</li>
-                        <li>Emotional Regulation</li>
-                        <li>Problem Solving</li>
-                        <li>Resilience Building</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="section process-section">
+    <!-- Benefits Section -->
+    <section class="benefits-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Counseling Process</h2>
-                <p class="section-subtitle">A structured approach to your emotional wellbeing journey</p>
+                <span class="section-tag">Business Impact</span>
+                <h2 class="section-title">Organizational <span class="eap-gradient">Benefits</span></h2>
             </div>
             
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Initial Consultation</h3>
-                    <p>45-minute session to understand your concerns and goals</p>
+            <div class="benefit-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5>Increased Productivity</h5>
+                    <p>Healthier employees show 40% higher productivity levels and better focus.</p>
                 </div>
                 
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Assessment</h3>
-                    <p>Comprehensive evaluation to create your personalized therapy plan</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h5>Cost Reduction</h5>
+                    <p>Reduced healthcare costs and decreased absenteeism by up to 30%.</p>
                 </div>
                 
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Therapy Sessions</h3>
-                    <p>Weekly or bi-weekly 50-minute sessions focusing on your goals</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5>Employee Retention</h5>
+                    <p>75% improvement in employee retention and loyalty to the organization.</p>
                 </div>
                 
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Progress Review</h3>
-                    <p>Regular check-ins to track progress and adjust approach as needed</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3>Maintenance & Growth</h3>
-                    <p>Continued support for sustained wellbeing and personal growth</p>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h5>Enhanced Reputation</h5>
+                    <p>Improved employer brand and attractiveness to top talent in the market.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="section pricing-section">
+    <!-- Implementation Section -->
+    <section class="implementation-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Session Packages</h2>
-                <p class="section-subtitle">Flexible options to suit your needs and budget</p>
+                <span class="section-tag">Process</span>
+                <h2 class="section-title">Program <span class="eap-gradient">Implementation</span></h2>
             </div>
             
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Single Session</h3>
-                        <div class="price">₹1,500</div>
-                        <p>per session</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Needs Assessment</h4>
+                        <p>Comprehensive analysis of organizational needs, employee concerns, and existing wellness initiatives.</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 50-minute session</li>
-                        <li><i class="fas fa-check"></i> Personalized approach</li>
-                        <li><i class="fas fa-check"></i> Flexible scheduling</li>
-                        <li><i class="fas fa-check"></i> Progress assessment</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    <div class="timeline-marker"></div>
                 </div>
                 
-                <div class="pricing-card popular">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>4-Session Package</h3>
-                        <div class="price">₹5,400</div>
-                        <p>Save 10% (₹1,350/session)</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Customized Plan Design</h4>
+                        <p>Development of tailored EAP solutions based on assessment findings and organizational goals.</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 4 x 50-minute sessions</li>
-                        <li><i class="fas fa-check"></i> Comprehensive assessment</li>
-                        <li><i class="fas fa-check"></i> Personalized therapy plan</li>
-                        <li><i class="fas fa-check"></i> Between-session support</li>
-                        <li><i class="fas fa-check"></i> Progress reports</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Book Package</a>
+                    <div class="timeline-marker"></div>
                 </div>
                 
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>8-Session Package</h3>
-                        <div class="price">₹9,600</div>
-                        <p>Save 20% (₹1,200/session)</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Program Rollout</h4>
+                        <p>Phased implementation with employee orientation, manager training, and awareness campaigns.</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 8 x 50-minute sessions</li>
-                        <li><i class="fas fa-check"></i> Extended therapy program</li>
-                        <li><i class="fas fa-check"></i> In-depth assessment</li>
-                        <li><i class="fas fa-check"></i> Email support included</li>
-                        <li><i class="fas fa-check"></i> Custom resources</li>
-                        <li><i class="fas fa-check"></i> Family session included</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Book Package</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Counseling FAQs</h2>
-                <p class="section-subtitle">Common questions about individual counseling</p>
-            </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3 class="faq-question">How long does each counseling session last?</h3>
-                    <p class="faq-answer">Each individual counseling session lasts 50 minutes. The initial consultation may extend to 60 minutes to allow for comprehensive assessment.</p>
+                    <div class="timeline-marker"></div>
                 </div>
                 
-                <div class="faq-item">
-                    <h3 class="faq-question">How many sessions will I need?</h3>
-                    <p class="faq-answer">The number of sessions varies based on individual needs. Some clients see progress in 4-6 sessions, while others may benefit from longer-term therapy. We'll discuss this during your initial consultation.</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Ongoing Support & Evaluation</h4>
+                        <p>Continuous monitoring, support services, and regular impact assessment with reporting.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
                 </div>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">Is online counseling available?</h3>
-                    <p class="faq-answer">Yes, we offer both in-person sessions at our Coimbatore center and secure online counseling via video conferencing for your convenience.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">What if I need to cancel or reschedule?</h3>
-                    <p class="faq-answer">We understand that schedules can change. You can reschedule or cancel your session with 24 hours notice without any penalty.</p>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="contact.html" class="btn btn-primary btn-large">
-                    <i class="fas fa-comment-dots"></i> Have More Questions? Contact Us
-                </a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section class="eap-cta" id="contact">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Begin Your Healing Journey?</h2>
-                <p class="cta-description">Take the first step towards emotional wellbeing with our compassionate counseling team</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-calendar-alt"></i> Book Your First Session
-                    </a>
-                    <a href="tel:+917010669191" class="btn btn-secondary btn-large">
-                        <i class="fas fa-phone"></i> Call: +91 7010669191
-                    </a>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="cta-title">Transform Your Workplace Culture</h2>
+                    
+                    <p class="cta-description">
+                        Partner with us to create a healthier, more productive work environment. 
+                        Our customized EAP solutions have helped organizations across Coimbatore achieve remarkable results.
+                    </p>
+                    
+                    <div class="row mt-5 mb-5">
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-cogs fa-3x mb-3"></i>
+                                <h5>Custom Solutions</h5>
+                                <small>Tailored to your needs</small>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                                <h5>Confidential</h5>
+                                <small>100% privacy ensured</small>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-chart-bar fa-3x mb-3"></i>
+                                <h5>ROI Focused</h5>
+                                <small>Measurable results</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="../contact.html" class="btn btn-light btn-lg mr-3" style="color: var(--eap-primary);">
+                            <i class="fas fa-file-contract mr-2"></i>Request Proposal
+                        </a>
+                        <a href="tel:+917010669191" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone mr-2"></i>Schedule Demo
+                        </a>
+                    </div>
+                    
+                    <p class="mt-4" style="opacity: 0.8;">
+                        <small><i class="fas fa-info-circle mr-2"></i>Serving organizations of all sizes across Coimbatore</small>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
-     <footer class="main-footer">
+    <!-- Footer -->
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="footer-brand">
                         <i class="fas fa-spa"></i>
-                        <div class="footer-logo-text">
+                        <div>
                             <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
                         </div>
                     </div>
                     <p class="footer-description">
-                        A sanctuary for emotional wellbeing in Coimbatore, providing professional 
-                        mental health counseling and therapeutic programs since 2020.
+                        Building healthier workplaces through comprehensive Employee Assistance Programs in Coimbatore since 2020.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h5>Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services/index.html">Our Services</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="index.html">Services</a></li>
+                        <li><a href="../programs.html">Programs</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Our Services</h3>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5>Corporate Solutions</h5>
                     <ul class="footer-links">
-                        <li><a href="services/counselling.html">Individual Counseling</a></li>
-                        <li><a href="services/bold-butterflies.html">Student Support</a></li>
-                        <li><a href="services/paavai-mozhi.html">Women's Wellness</a></li>
-                        <li><a href="services/the-roots.html">Parent Guidance</a></li>
-                        <li><a href="services/eap.html">Corporate Programs</a></li>
+                        <li><a href="eap.html" class="active">EAP Program</a></li>
+                        <li><a href="../programs.html">Leadership Training</a></li>
+                        <li><a href="counselling.html">Corporate Counseling</a></li>
+                        <li><a href="../contact.html">Wellness Workshops</a></li>
+                        <li><a href="skill-lab.html">Skill Development</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
                     <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Coimbatore, Tamil Nadu, India</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+917010669191">+91 7010669191</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
-                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+917010669191">+91 7010669191</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9 AM - 7 PM</li>
+                        <li><i class="fas fa-briefcase"></i> Corporate Hours: 10 AM - 6 PM</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 THULIR.IDAM. All rights reserved. | A Home For Your Inner Self</p>
-                    <div class="footer-bottom-links">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="cancellation-policy.html">Cancellation Policy</a>
-                    </div>
+                <p>&copy; 2025 THULIR.IDAM Employee Assistance Program. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../cancellation.html">Cancellation Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script src="../js/main.js"></script>
+    <script>
+        // ===== EAP JAVASCRIPT =====
+        
+        $(document).ready(function() {
+            // Create network nodes
+            createNetworkNodes();
+            
+            // Back to top button
+            $('#backToTop').click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+            
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#backToTop').fadeIn();
+                } else {
+                    $('#backToTop').fadeOut();
+                }
+            });
+            
+            // Smooth scroll
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
+            
+            // Add floating animation
+            $('.floating').each(function(index) {
+                $(this).css({
+                    'animation': `float ${4 + index}s ease-in-out infinite`,
+                    'animationDelay': `${index * 1}s`
+                });
+            });
+            
+            // Service card hover effect
+            $('.service-card').hover(
+                function() {
+                    $(this).find('.service-icon').css({
+                        'transform': 'scale(1.1)',
+                        'background': 'linear-gradient(135deg, var(--eap-primary), var(--eap-secondary))',
+                        'color': 'white'
+                    });
+                },
+                function() {
+                    $(this).find('.service-icon').css({
+                        'transform': 'scale(1)',
+                        'background': 'linear-gradient(135deg, var(--eap-light), white)',
+                        'color': 'var(--eap-primary)'
+                    });
+                }
+            );
+            
+            // Animate elements on scroll
+            function animateOnScroll() {
+                $('.benefit-item, .timeline-item').each(function() {
+                    if ($(this).visible(true)) {
+                        $(this).addClass('animate__animated animate__fadeIn');
+                    }
+                });
+                
+                $('.service-card').each(function(index) {
+                    if ($(this).visible(true) && !$(this).hasClass('animated')) {
+                        $(this).addClass('animate__animated animate__fadeInUp');
+                        $(this).addClass('animated');
+                    }
+                });
+            }
+            
+            // Initialize animations
+            animateOnScroll();
+            $(window).on('scroll', animateOnScroll);
+            
+            // Button click animation
+            $('.btn').on('click', function() {
+                $(this).addClass('animate__animated animate__pulse');
+                setTimeout(() => {
+                    $(this).removeClass('animate__animated animate__pulse');
+                }, 1000);
+            });
+            
+            // Corporate icon animation
+            $('.corporate-icon').each(function(index) {
+                $(this).css({
+                    'position': 'absolute',
+                    'top': `${20 + index * 30}%`,
+                    'left': `${20 + index * 20}%`
+                });
+            });
+        });
+        
+        // Create network nodes animation
+        function createNetworkNodes() {
+            var container = $('#networkContainer');
+            var nodeCount = 20;
+            
+            for (var i = 0; i < nodeCount; i++) {
+                var node = $('<div class="network-node"></div>');
+                
+                // Random position
+                var left = Math.random() * 100;
+                var top = Math.random() * 100;
+                var delay = Math.random() * 2;
+                
+                node.css({
+                    left: left + '%',
+                    top: top + '%',
+                    animationDelay: delay + 's'
+                });
+                
+                container.append(node);
+            }
+        }
+        
+        // Visibility check function
+        $.fn.visible = function(partial) {
+            var $t = $(this),
+                $w = $(window),
+                viewTop = $w.scrollTop(),
+                viewBottom = viewTop + $w.height(),
+                _top = $t.offset().top,
+                _bottom = _top + $t.height(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+            
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+        
+        // Floating animation keyframes
+        var style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(5deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
