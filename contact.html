@@ -13,169 +13,485 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    
     <style>
-        /* Contact Page Specific Styles */
-        .contact-form .form-control {
-            border-radius: 8px;
-            border: 1px solid #E5E7EB;
+        /* ===== PREMIUM CONTACT PAGE CSS ===== */
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1A472A;
+            --primary-light: #90EE90;
+            --accent: #FFB6C1;
+            --light: #F0FFF0;
+            --dark: #1A472A;
+            --gold: #D4AF37;
+            --text-dark: #1A472A;
+            --text-light: #4a5568;
+            --shadow: rgba(46, 139, 87, 0.15);
+        }
+        
+        /* Hero Section */
+        .contact-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, #F0FFF0 0%, #E8F5E8 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+        }
+        
+        .hero-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(46, 139, 87, 0.05);
+            animation: floatShape 20s linear infinite;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+            background: rgba(144, 238, 144, 0.05);
+            animation-delay: 5s;
+        }
+        
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            top: 30%;
+            right: 15%;
+            background: rgba(255, 182, 193, 0.05);
+            animation-delay: 10s;
+        }
+        
+        @keyframes floatShape {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, 20px) rotate(90deg); }
+            50% { transform: translate(0, 40px) rotate(180deg); }
+            75% { transform: translate(-20px, 20px) rotate(270deg); }
+        }
+        
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .contact-hero .lead {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Details Section */
+        .contact-details-section {
+            background: white;
+            position: relative;
+        }
+        
+        .contact-method {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(46, 139, 87, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-method::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-method:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+            border-color: var(--primary);
+        }
+        
+        .contact-method i {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-right: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover i {
+            transform: scale(1.2);
+        }
+        
+        .contact-method a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .contact-method a:hover {
+            color: var(--primary);
+        }
+        
+        /* Contact Form Section */
+        .contact-form-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 40px var(--shadow);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-form-section:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .contact-form-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(46, 139, 87, 0.2);
+        }
+        
+        .form-control {
+            border: 2px solid rgba(46, 139, 87, 0.2);
+            border-radius: 12px;
             padding: 15px 20px;
             font-size: 1rem;
             transition: all 0.3s ease;
+            background: var(--light);
         }
-
-        .contact-form .form-control:focus {
+        
+        .form-control:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(93, 95, 239, 0.1);
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+            background: white;
         }
-
-        .contact-form .form-control-lg {
+        
+        .form-control-lg {
             padding: 18px 20px;
         }
-
-        .contact-form label {
-            font-weight: 500;
-            margin-bottom: 8px;
+        
+        label {
+            font-weight: 600;
+            margin-bottom: 10px;
             color: var(--dark);
         }
-
-        .contact-form-section {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232E8B57' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
         }
-
-        .contact-method a {
-            color: var(--primary);
-            text-decoration: none;
+        
+        /* Map Section */
+        .map-section {
+            background: linear-gradient(135deg, var(--light) 0%, #F8FFF8 100%);
+        }
+        
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(46, 139, 87, 0.2);
+            border-color: rgba(46, 139, 87, 0.1);
+        }
+        
+        /* FAQ Section */
+        .contact-faq {
+            background: white;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+        }
+        
+        .accordion .card {
+            border: 2px solid rgba(46, 139, 87, 0.1);
+            border-radius: 15px !important;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background: var(--light);
             transition: all 0.3s ease;
         }
-
-        .contact-method a:hover {
-            color: var(--primary-dark);
+        
+        .accordion .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px var(--shadow);
         }
-
-        /* Map Styles */
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        /* FAQ Accordion Styles */
-        .accordion .card {
-            border: 1px solid #E5E7EB;
-            border-radius: 8px !important;
-            overflow: hidden;
-            margin-bottom: 15px;
-        }
-
+        
         .accordion .card-header {
-            background: var(--white);
+            background: transparent;
             border: none;
             padding: 0;
         }
-
+        
         .accordion .btn-link {
             color: var(--dark);
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
-            padding: 20px 25px;
+            padding: 25px 30px;
             width: 100%;
             text-align: left;
+            background: white;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .accordion>.card:not(:last-of-type) {
+            border-bottom: 2px solid rgba(46, 139, 87, 0.1) !important;
         }
 
         .accordion .btn-link:hover {
             color: var(--primary);
+            background: var(--light);
         }
-
+        
+        .accordion .btn-link[aria-expanded="true"] {
+            background: linear-gradient(135deg, var(--light), white);
+            color: var(--primary);
+        }
+        
         .accordion .btn-link[aria-expanded="true"] i {
             transform: rotate(180deg);
         }
-
+        
         .accordion .btn-link i {
             transition: transform 0.3s ease;
-        }
-
-        .accordion .card-body {
-            padding: 20px 25px;
-            color: var(--gray);
-            line-height: 1.8;
+            color: var(--primary);
         }
         
+        .accordion .card-body {
+            padding: 25px 30px;
+            color: var(--text-light);
+            line-height: 1.8;
+            background: white;
+            border-top: 1px solid rgba(46, 139, 87, 0.1);
+        }
+        
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
         /* Form Validation Styles */
         .is-invalid {
-            border-color: #dc3545 !important;
+            border-color: #e53e3e !important;
         }
-
+        
         .is-invalid:focus {
-            border-color: #dc3545 !important;
-            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+            border-color: #e53e3e !important;
+            box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1) !important;
         }
-
+        
         .error-message {
-            color: #dc3545;
+            color: #e53e3e;
             font-size: 0.875rem;
             margin-top: 0.25rem;
+            display: none;
         }
-
-        /* Success Button State */
-        .btn-success {
-            background-color: #28a745 !important;
-            border-color: #28a745 !important;
+        
+        .is-invalid + .error-message {
+            display: block;
         }
-
-        .btn-success:hover {
-            background-color: #218838 !important;
-            border-color: #1e7e34 !important;
-        }
-
-        /* Alert Styles */
-        .alert {
-            border-radius: 8px;
-            border: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        
+        /* Success Message */
+        .alert-success {
+            background: linear-gradient(135deg, #d1fae5, #ecfdf5);
+            border: 2px solid #10b981;
+            color: #065f46;
+            border-radius: 12px;
+            padding: 20px;
             margin-bottom: 30px;
         }
-
-        .alert-success {
-            background-color: #d1fae5;
-            color: #065f46;
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
         }
-
-        .alert-danger {
-            background-color: #fee2e2;
-            color: #991b1b;
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
-
-        .alert .close {
-            color: inherit;
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .contact-hero h1,
+            .section-title {
+                font-size: 3rem;
+            }
         }
-
-        /* Responsive Styles for Contact Page */
-        @media (max-width: 768px) {
-            .contact-form-section {
-                padding: 25px;
+        
+        @media (max-width: 992px) {
+            .contact-hero h1 {
+                font-size: 2.5rem;
             }
             
-            .contact-form .form-control-lg {
-                padding: 15px 20px;
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .contact-hero .lead {
+                font-size: 1.1rem;
+            }
+            
+            .contact-form-section {
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 150px 0 80px;
+                margin-top: 70px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-form-section {
+                padding: 30px 20px;
             }
             
             .contact-method {
-                padding: 15px 0;
+                padding: 25px 20px;
+            }
+            
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .btn-primary,
+            .btn-outline-primary {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .accordion .btn-link {
+                padding: 20px 15px;
+                font-size: 1rem;
+            }
+            .h4, h4 {
+                font-size: 1rem;
             }
         }
     </style>
@@ -206,7 +522,7 @@
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="services/index.html" id="servicesDropdown" 
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" 
                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Services
                             </a>
@@ -237,85 +553,102 @@
     </header>
 
     <!-- Contact Hero -->
-    <section class="contact-hero py-5" style="background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);">
-        <div class="container py-5">
+    <section class="contact-hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="floating-element" style="animation-delay: 0s; top: 20%; left: 10%;">
+            <i class="fas fa-envelope fa-3x" style="color: var(--primary);"></i>
+        </div>
+        <div class="floating-element" style="animation-delay: 2s; top: 40%; right: 15%;">
+            <i class="fas fa-phone fa-3x" style="color: var(--primary-light);"></i>
+        </div>
+        <div class="floating-element" style="animation-delay: 4s; bottom: 20%; left: 20%;">
+            <i class="fas fa-heart fa-3x" style="color: var(--accent);"></i>
+        </div>
+        
+        <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h1 class="display-4 font-weight-bold mb-4">Get In Touch</h1>
-                    <p class="lead text-muted">We're here to support you on your journey to emotional wellbeing</p>
+                    <h1 class="animate__animated animate__fadeInDown">Get In Touch</h1>
+                    <p class="lead animate__animated animate__fadeInUp animate__delay-1s">We're here to support you on your journey to emotional wellbeing</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Details -->
-    <section class="section contact-details py-5">
-        <div class="container py-5">
+    <section class="section contact-details-section">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="contact-info">
+                    <div class="contact-info reveal">
                         <h2 class="mb-4">Contact Information</h2>
-                        <div class="contact-methods">
-                            <div class="contact-method d-flex mb-4">
-                                <div class="mr-4">
-                                    <i class="fas fa-phone fa-2x text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 mb-2">Phone</h3>
-                                    <a href="tel:+917010669191" class="d-block h4 mb-2">+91 7010669191</a>
-                                    <p class="text-muted mb-0">Mon-Sat: 9:00 AM - 7:00 PM</p>
-                                </div>
+                        
+                        <div class="contact-method d-flex">
+                            <div class="mr-4">
+                                <i class="fas fa-phone"></i>
                             </div>
-                            
-                            <div class="contact-method d-flex mb-4">
-                                <div class="mr-4">
-                                    <i class="fas fa-envelope fa-2x text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 mb-2">Email</h3>
-                                    <a href="mailto:thuliridam2025@gmail.com" class="d-block h4 mb-2">thuliridam2025@gmail.com</a>
-                                    <p class="text-muted mb-0">Response within 24 hours</p>
-                                </div>
+                            <div>
+                                <h3 class="h5 mb-2">Phone</h3>
+                                <a href="tel:+917010669191" class="d-block h4 mb-2">+91 7010669191</a>
+                                <p class="text-muted mb-0">Mon-Sat: 9:00 AM - 7:00 PM</p>
                             </div>
-                            
-                            <div class="contact-method d-flex mb-4">
-                                <div class="mr-4">
-                                    <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 mb-2">Location</h3>
-                                    <p class="mb-1">Coimbatore, Tamil Nadu</p>
-                                    <p class="text-muted mb-0">India</p>
-                                </div>
+                        </div>
+                        
+                        <div class="contact-method d-flex">
+                            <div class="mr-4">
+                                <i class="fas fa-envelope"></i>
                             </div>
-                            
-                            <div class="contact-method d-flex">
-                                <div class="mr-4">
-                                    <i class="fas fa-clock fa-2x text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 mb-2">Working Hours</h3>
-                                    <p class="mb-1">Monday - Saturday: 9:00 AM - 7:00 PM</p>
-                                    <p class="text-muted mb-0">Sunday: By Appointment Only</p>
-                                </div>
+                            <div>
+                                <h3 class="h5 mb-2">Email</h3>
+                                <a href="mailto:thuliridam2025@gmail.com" class="d-block h4 mb-2">thuliridam2025@gmail.com</a>
+                                <p class="text-muted mb-0">Response within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method d-flex">
+                            <div class="mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-2">Location</h3>
+                                <p class="mb-1">Coimbatore, Tamil Nadu</p>
+                                <p class="text-muted mb-0">India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method d-flex">
+                            <div class="mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-2">Working Hours</h3>
+                                <p class="mb-1">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                <p class="text-muted mb-0">Sunday: By Appointment Only</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-7">
-                    <div class="contact-form-section bg-white p-4 p-lg-5 rounded shadow">
+                    <div class="contact-form-section reveal">
                         <h2 class="mb-4">Schedule an Appointment</h2>
                         <form id="appointmentForm" class="contact-form">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name" class="font-weight-bold">Full Name *</label>
                                     <input type="text" class="form-control form-control-lg" id="name" name="name" required>
+                                    <div class="error-message">Please enter your full name</div>
                                 </div>
                                 
                                 <div class="form-group col-md-6">
                                     <label for="email" class="font-weight-bold">Email Address *</label>
                                     <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+                                    <div class="error-message">Please enter a valid email address</div>
                                 </div>
                             </div>
                             
@@ -323,6 +656,7 @@
                                 <div class="form-group col-md-6">
                                     <label for="phone" class="font-weight-bold">Phone Number *</label>
                                     <input type="tel" class="form-control form-control-lg" id="phone" name="phone" required>
+                                    <div class="error-message">Please enter a valid phone number</div>
                                 </div>
                                 
                                 <div class="form-group col-md-6">
@@ -336,6 +670,7 @@
                                         <option value="eap">Employee Assistance Program</option>
                                         <option value="skill-lab">Skill Set Lab</option>
                                     </select>
+                                    <div class="error-message">Please select a service</div>
                                 </div>
                             </div>
                             
@@ -349,6 +684,11 @@
                                 <textarea class="form-control form-control-lg" id="message" name="message" rows="4" placeholder="Tell us about your concerns and goals..."></textarea>
                             </div>
                             
+                            <div id="formSuccess" class="alert-success" style="display: none;">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Thank you! Your message has been sent successfully. We'll contact you within 24 hours.
+                            </div>
+                            
                             <button type="submit" class="btn btn-primary btn-lg btn-block py-3">
                                 <i class="fas fa-paper-plane mr-2"></i> Send Message
                             </button>
@@ -360,10 +700,10 @@
     </section>
 
     <!-- Map Section -->
-    <section class="section map-section py-5 bg-light">
-        <div class="container py-5">
-            <h2 class="text-center mb-5">Our Location</h2>
-            <div class="map-container rounded overflow-hidden shadow">
+    <section class="section map-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Location</h2>
+            <div class="map-container reveal">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.981502524477!2d76.9477828152609!3d10.998634592188692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859b2c8e6c6bd%3A0x3c6b3c7c3c7c3c7c!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1628492387654!5m2!1sen!2sin" 
                         width="100%" 
                         height="450" 
@@ -376,22 +716,19 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section contact-faq py-5">
-        <div class="container py-5">
-            <h2 class="text-center mb-5">Common Questions</h2>
+    <section class="section contact-faq">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Common Questions</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div id="contactFAQ" class="accordion">
-                        <div class="card mb-3">
+                    <div id="contactFAQ" class="accordion reveal">
+                        <div class="card">
                             <div class="card-header" id="faqHeading1">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" 
-                                            data-toggle="collapse" data-target="#faqCollapse1" 
-                                            aria-expanded="true" aria-controls="faqCollapse1">
-                                        How soon can I get an appointment?
-                                        <i class="fas fa-chevron-down"></i>
-                                    </button>
-                                </h5>
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#faqCollapse1" 
+                                        aria-expanded="true" aria-controls="faqCollapse1">
+                                    How soon can I get an appointment?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
                             </div>
                             <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#contactFAQ">
                                 <div class="card-body">
@@ -401,16 +738,13 @@
                             </div>
                         </div>
                         
-                        <div class="card mb-3">
+                        <div class="card">
                             <div class="card-header" id="faqHeading2">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
-                                            data-toggle="collapse" data-target="#faqCollapse2" 
-                                            aria-expanded="false" aria-controls="faqCollapse2">
-                                        What should I expect in my first session?
-                                        <i class="fas fa-chevron-down"></i>
-                                    </button>
-                                </h5>
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse2" 
+                                        aria-expanded="false" aria-controls="faqCollapse2">
+                                    What should I expect in my first session?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
                             </div>
                             <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#contactFAQ">
                                 <div class="card-body">
@@ -421,16 +755,13 @@
                             </div>
                         </div>
                         
-                        <div class="card mb-3">
+                        <div class="card">
                             <div class="card-header" id="faqHeading3">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
-                                            data-toggle="collapse" data-target="#faqCollapse3" 
-                                            aria-expanded="false" aria-controls="faqCollapse3">
-                                        Do you accept insurance?
-                                        <i class="fas fa-chevron-down"></i>
-                                    </button>
-                                </h5>
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse3" 
+                                        aria-expanded="false" aria-controls="faqCollapse3">
+                                    Do you accept insurance?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
                             </div>
                             <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-parent="#contactFAQ">
                                 <div class="card-body">
@@ -441,16 +772,13 @@
                             </div>
                         </div>
                         
-                        <div class="card mb-3">
+                        <div class="card">
                             <div class="card-header" id="faqHeading4">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
-                                            data-toggle="collapse" data-target="#faqCollapse4" 
-                                            aria-expanded="false" aria-controls="faqCollapse4">
-                                        What is your cancellation policy?
-                                        <i class="fas fa-chevron-down"></i>
-                                    </button>
-                                </h5>
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse4" 
+                                        aria-expanded="false" aria-controls="faqCollapse4">
+                                    What is your cancellation policy?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
                             </div>
                             <div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4" data-parent="#contactFAQ">
                                 <div class="card-body">
@@ -463,14 +791,11 @@
                         
                         <div class="card">
                             <div class="card-header" id="faqHeading5">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center collapsed" 
-                                            data-toggle="collapse" data-target="#faqCollapse5" 
-                                            aria-expanded="false" aria-controls="faqCollapse5">
-                                        Do you offer online therapy sessions?
-                                        <i class="fas fa-chevron-down"></i>
-                                    </button>
-                                </h5>
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse5" 
+                                        aria-expanded="false" aria-controls="faqCollapse5">
+                                    Do you offer online therapy sessions?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
                             </div>
                             <div id="faqCollapse5" class="collapse" aria-labelledby="faqHeading5" data-parent="#contactFAQ">
                                 <div class="card-body">
@@ -575,14 +900,249 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: linear-gradient(45deg, var(--primary), var(--primary-light)); color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3); z-index: 1000; transition: all 0.3s ease;">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Form Validation JS -->
-    <script src="js/form-validation.js"></script>
-    
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script>
+        // ===== PREMIUM ANIMATIONS FOR CONTACT PAGE =====
+        
+        $(document).ready(function() {
+            // Form validation
+            setupFormValidation();
+            
+            // Scroll animations
+            setupScrollAnimations();
+            
+            // Back to top button
+            setupBackToTop();
+            
+            // Smooth scroll for anchor links
+            setupSmoothScroll();
+            
+            // Hover animations for elements
+            setupHoverAnimations();
+            
+            // Parallax effect
+            setupParallaxEffect();
+            
+            // Initialize animations
+            animateOnScroll();
+        });
+        
+        // Form validation and submission
+        function setupFormValidation() {
+            const form = $('#appointmentForm');
+            const successMessage = $('#formSuccess');
+            
+            // Validation for each input
+            form.find('input, select, textarea').on('blur', function() {
+                validateField($(this));
+            });
+            
+            // Form submission
+            form.on('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                
+                // Validate all required fields
+                form.find('[required]').each(function() {
+                    if (!validateField($(this))) {
+                        isValid = false;
+                    }
+                });
+                
+                if (isValid) {
+                    // Here you would normally send the form data to a server
+                    // For now, we'll show a success message
+                    successMessage.fadeIn();
+                    form[0].reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.fadeOut();
+                    }, 5000);
+                    
+                    // Scroll to success message
+                    $('html, body').animate({
+                        scrollTop: successMessage.offset().top - 100
+                    }, 500);
+                } else {
+                    // Scroll to first error
+                    const firstError = form.find('.is-invalid').first();
+                    if (firstError.length) {
+                        $('html, body').animate({
+                            scrollTop: firstError.offset().top - 100
+                        }, 500);
+                    }
+                }
+            });
+            
+            // Individual field validation
+            function validateField(field) {
+                const value = field.val().trim();
+                const errorMessage = field.next('.error-message');
+                
+                // Clear previous error state
+                field.removeClass('is-invalid');
+                errorMessage.hide();
+                
+                // Check if field is required and empty
+                if (field.prop('required') && !value) {
+                    field.addClass('is-invalid');
+                    errorMessage.show();
+                    return false;
+                }
+                
+                // Email validation
+                if (field.attr('type') === 'email' && value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        field.addClass('is-invalid');
+                        errorMessage.show();
+                        return false;
+                    }
+                }
+                
+                // Phone validation (basic)
+                if (field.attr('type') === 'tel' && value) {
+                    const phoneRegex = /^[0-9]{10}$/;
+                    const cleanedValue = value.replace(/\D/g, '');
+                    if (!phoneRegex.test(cleanedValue)) {
+                        field.addClass('is-invalid');
+                        errorMessage.show();
+                        return false;
+                    }
+                }
+                
+                return true;
+            }
+            
+            // Real-time phone formatting
+            $('#phone').on('input', function() {
+                let value = $(this).val().replace(/\D/g, '');
+                if (value.length > 10) value = value.substring(0, 10);
+                
+                // Format: XXX-XXX-XXXX
+                if (value.length > 6) {
+                    value = value.substring(0, 6) + '-' + value.substring(6);
+                }
+                if (value.length > 3) {
+                    value = value.substring(0, 3) + '-' + value.substring(3);
+                }
+                
+                $(this).val(value);
+            });
+        }
+        
+        // Scroll animations
+        function setupScrollAnimations() {
+            function animateOnScroll() {
+                $('.reveal').each(function() {
+                    if ($(this).visible(true)) {
+                        $(this).addClass('active');
+                    }
+                });
+            }
+            
+            // Initial animation
+            animateOnScroll();
+            
+            // Animate on scroll
+            $(window).on('scroll', animateOnScroll);
+        }
+        
+        // Back to top button
+        function setupBackToTop() {
+            const $backToTop = $('#backToTop');
+            
+            $backToTop.click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+            
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $backToTop.fadeIn();
+                } else {
+                    $backToTop.fadeOut();
+                }
+            });
+        }
+        
+        // Smooth scroll
+        function setupSmoothScroll() {
+            $('a[href^="#"]').on('click', function(event) {
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
+        }
+        
+        // Hover animations
+        function setupHoverAnimations() {
+            $('.contact-method, .contact-form-section, .map-container, .card').each(function() {
+                $(this).hover(
+                    function() {
+                        $(this).css('transform', $(this).data('original-transform'));
+                    },
+                    function() {
+                        $(this).css('transform', '');
+                    }
+                );
+            });
+            
+            // Contact method icons hover
+            $('.contact-method').hover(
+                function() {
+                    $(this).find('i').css('transform', 'scale(1.2)');
+                },
+                function() {
+                    $(this).find('i').css('transform', 'scale(1)');
+                }
+            );
+        }
+        
+        // Parallax effect
+        function setupParallaxEffect() {
+            $(window).scroll(function() {
+                const scrolled = $(this).scrollTop();
+                $('.shape-1').css('transform', `translate(${scrolled * 0.015}px, ${scrolled * 0.02}px)`);
+                $('.shape-2').css('transform', `translate(${scrolled * -0.01}px, ${scrolled * 0.015}px)`);
+                $('.shape-3').css('transform', `translate(${scrolled * 0.01}px, ${scrolled * -0.01}px)`);
+                
+                // Floating elements
+                $('.floating-element').each(function() {
+                    const speed = 0.02;
+                    $(this).css('transform', `translateY(${scrolled * speed}px)`);
+                });
+            });
+        }
+        
+        // Visibility check function
+        $.fn.visible = function(partial) {
+            const $t = $(this);
+            const $w = $(window);
+            const viewTop = $w.scrollTop();
+            const viewBottom = viewTop + $w.height();
+            const _top = $t.offset().top;
+            const _bottom = _top + $t.height();
+            const compareTop = partial === true ? _bottom : _top;
+            const compareBottom = partial === true ? _top : _bottom;
+            
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+    </script>
 </body>
 </html>

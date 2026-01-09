@@ -13,17 +13,530 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        /* ===== PREMIUM ABOUT PAGE CSS ===== */
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1A472A;
+            --primary-light: #90EE90;
+            --accent: #FFB6C1;
+            --light: #F0FFF0;
+            --dark: #1A472A;
+            --gold: #D4AF37;
+            --text-dark: #1A472A;
+            --text-light: #4a5568;
+            --shadow: rgba(46, 139, 87, 0.15);
+        }
+        
+        
+        /* Hero Banner */
+        .page-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, #F0FFF0 0%, #E8F5E8 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(46, 139, 87, 0.05);
+            animation: floatShape 20s linear infinite;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+            background: rgba(144, 238, 144, 0.05);
+            animation-delay: 5s;
+        }
+        
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            top: 30%;
+            right: 15%;
+            background: rgba(255, 182, 193, 0.05);
+            animation-delay: 10s;
+        }
+        
+        @keyframes floatShape {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, 20px) rotate(90deg); }
+            50% { transform: translate(0, 40px) rotate(180deg); }
+            75% { transform: translate(-20px, 20px) rotate(270deg); }
+        }
+        
+        .page-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .page-hero .lead {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Founder Story Section */
+        .founder-story {
+            background: white;
+            position: relative;
+        }
+        
+        .founder-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow);
+            transition: transform 0.5s ease;
+        }
+        
+        .founder-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        .founder-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-light));
+            opacity: 0.1;
+            border-radius: 20px;
+            z-index: -1;
+        }
+        
+        .founder-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .founder-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+        }
+        
+        .text-primary {
+            color: var(--primary) !important;
+        }
+        
+        .qualifications-grid {
+            margin-top: 40px;
+        }
+        
+        .qualification-item {
+            background: white;
+            border: 1px solid rgba(46, 139, 87, 0.1) !important;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .qualification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+            border-color: var(--primary) !important;
+        }
+        
+        .qualification-item i {
+            transition: all 0.3s ease;
+        }
+        
+        .qualification-item:hover i {
+            transform: scale(1.2);
+            color: var(--primary) !important;
+        }
+        
+        /* Mission Section */
+        .mission-section {
+            background: linear-gradient(135deg, var(--light) 0%, #F8FFF8 100%);
+        }
+        
+        .mission-point {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(46, 139, 87, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mission-point:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 30px var(--shadow);
+            border-color: var(--primary);
+        }
+        
+        .mission-point i {
+            transition: all 0.3s ease;
+        }
+        
+        .mission-point:hover i {
+            transform: scale(1.2);
+        }
+        
+        .mission-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow);
+            transition: transform 0.5s ease;
+        }
+        
+        .mission-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Values Section */
+        .values-section {
+            background: white;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .value-card {
+            background: white;
+            border: 1px solid rgba(46, 139, 87, 0.1) !important;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px var(--shadow);
+            border-color: transparent !important;
+        }
+        
+        .value-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover .value-icon {
+            transform: scale(1.1);
+        }
+        
+        /* Approach Section */
+        .approach-section {
+            background: linear-gradient(135deg, var(--light) 0%, #F8FFF8 100%);
+        }
+        
+        .approach-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow);
+            transition: transform 0.5s ease;
+        }
+        
+        .approach-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        .method {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(46, 139, 87, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .method:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px var(--shadow);
+            border-color: var(--primary);
+        }
+        
+        .method h4 {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .stagger-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Leaf Animation */
+        .leaf {
+            position: absolute;
+            font-size: 1.2rem;
+            color: var(--primary-light);
+            opacity: 0.6;
+            animation: fall linear infinite;
+            z-index: 1;
+            pointer-events: none;
+            text-shadow: 0 0 10px rgba(144, 238, 144, 0.3);
+        }
+        
+        .leaf-large {
+            font-size: 1.8rem;
+            opacity: 0.4;
+        }
+        
+        .leaf-small {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg) translateX(50px);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .page-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .founder-text h2,
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .page-hero .lead {
+                font-size: 1.1rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .founder-text h2,
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .qualifications-grid .col-md-4 {
+                margin-bottom: 20px;
+            }
+            
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .founder-text h2,
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .btn-primary,
+            .btn-outline-primary,
+            .btn-light {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -51,7 +564,7 @@
                             <a class="nav-link active" href="about.html">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="services/index.html" id="servicesDropdown" 
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" 
                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Services
                             </a>
@@ -82,25 +595,41 @@
     </header>
 
     <!-- About Hero -->
-    <section class="page-hero py-5" style="background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);">
-        <div class="container py-5">
+    <section class="page-hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="floating-element" style="animation-delay: 0s; top: 20%; left: 10%;">
+            <i class="fas fa-leaf fa-3x" style="color: var(--primary);"></i>
+        </div>
+        <div class="floating-element" style="animation-delay: 2s; top: 40%; right: 15%;">
+            <i class="fas fa-spa fa-3x" style="color: var(--primary-light);"></i>
+        </div>
+        <div class="floating-element" style="animation-delay: 4s; bottom: 20%; left: 20%;">
+            <i class="fas fa-heart fa-3x" style="color: var(--accent);"></i>
+        </div>
+        
+        <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h1 class="display-4 font-weight-bold mb-4">Our Story & Mission</h1>
-                    <p class="lead text-muted">Creating a sanctuary for emotional healing and personal growth</p>
+                    <h1 class="animate__animated animate__fadeInDown">Our Story & Mission</h1>
+                    <p class="lead animate__animated animate__fadeInUp animate__delay-1s">Creating a sanctuary for emotional healing and personal growth</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Founder Story -->
-    <section class="section founder-story py-5">
-        <div class="container py-5">
+    <section class="section founder-story">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="founder-image reveal">
-                        <img src="images/founder.jpg" alt="R.C. Nandhini - Founder & Mental Health Counselor" 
-                             class="img-fluid rounded shadow" loading="lazy" style="max-height: 500px; width: 100%; object-fit: cover;">
+                        <img src="images/nandhini.png" alt="R.C. Nandhini - Founder & Mental Health Counselor" 
+                             class="img-fluid rounded" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -112,8 +641,8 @@
                         
                         <div class="qualifications-grid row">
                             <div class="col-md-4 mb-4">
-                                <div class="qualification-item text-center p-3 rounded border">
-                                    <i class="fas fa-graduation-cap fa-2x mb-3 text-primary"></i>
+                                <div class="qualification-item text-center p-4 rounded border">
+                                    <i class="fas fa-heartbeat fa-2x mb-3 text-primary"></i>
                                     <div>
                                         <h4 class="h5 mb-2">M.A. Psychology</h4>
                                         <p class="text-muted small mb-0">University of Madras</p>
@@ -121,7 +650,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 mb-4">
-                                <div class="qualification-item text-center p-3 rounded border">
+                                <div class="qualification-item text-center p-4 rounded border">
                                     <i class="fas fa-certificate fa-2x mb-3 text-primary"></i>
                                     <div>
                                         <h4 class="h5 mb-2">Certified Counselor</h4>
@@ -130,7 +659,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 mb-4">
-                                <div class="qualification-item text-center p-3 rounded border">
+                                <div class="qualification-item text-center p-4 rounded border">
                                     <i class="fas fa-award fa-2x mb-3 text-primary"></i>
                                     <div>
                                         <h4 class="h5 mb-2">5+ Years Experience</h4>
@@ -146,8 +675,8 @@
     </section>
 
     <!-- Our Mission -->
-    <section class="section mission-section py-5 bg-light">
-        <div class="container py-5">
+    <section class="section mission-section">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="mission-text reveal">
@@ -196,8 +725,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="mission-image reveal">
-                        <img src="images/mission.jpg" alt="Our Mission - Mental Health Support Community" 
-                             class="img-fluid rounded shadow" loading="lazy" style="max-height: 500px; width: 100%; object-fit: cover;">
+                        <img src="images/mission.png" alt="Our Mission - Mental Health Support Community" 
+                             class="img-fluid rounded" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -205,8 +734,8 @@
     </section>
 
     <!-- Our Values -->
-    <section class="section values-section py-5">
-        <div class="container py-5">
+    <section class="section values-section">
+        <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
                     <h2 class="section-title mb-3">Our Core Values</h2>
@@ -216,7 +745,7 @@
             
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4 stagger-item">
-                    <div class="value-card text-center p-4 rounded border h-100">
+                    <div class="value-card text-center p-5 rounded border h-100">
                         <div class="value-icon mb-4">
                             <i class="fas fa-user-shield fa-3x text-primary"></i>
                         </div>
@@ -226,7 +755,7 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-4 mb-4 stagger-item">
-                    <div class="value-card text-center p-4 rounded border h-100">
+                    <div class="value-card text-center p-5 rounded border h-100">
                         <div class="value-icon mb-4">
                             <i class="fas fa-hands-helping fa-3x text-primary"></i>
                         </div>
@@ -236,7 +765,7 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-4 mb-4 stagger-item">
-                    <div class="value-card text-center p-4 rounded border h-100">
+                    <div class="value-card text-center p-5 rounded border h-100">
                         <div class="value-icon mb-4">
                             <i class="fas fa-star fa-3x text-primary"></i>
                         </div>
@@ -246,7 +775,7 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-4 mb-4 stagger-item">
-                    <div class="value-card text-center p-4 rounded border h-100">
+                    <div class="value-card text-center p-5 rounded border h-100">
                         <div class="value-icon mb-4">
                             <i class="fas fa-balance-scale fa-3x text-primary"></i>
                         </div>
@@ -256,7 +785,7 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-4 mb-4 stagger-item">
-                    <div class="value-card text-center p-4 rounded border h-100">
+                    <div class="value-card text-center p-5 rounded border h-100">
                         <div class="value-icon mb-4">
                             <i class="fas fa-brain fa-3x text-primary"></i>
                         </div>
@@ -266,7 +795,7 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-4 mb-4 stagger-item">
-                    <div class="value-card text-center p-4 rounded border h-100">
+                    <div class="value-card text-center p-5 rounded border h-100">
                         <div class="value-icon mb-4">
                             <i class="fas fa-seedling fa-3x text-primary"></i>
                         </div>
@@ -279,13 +808,13 @@
     </section>
 
     <!-- Our Approach -->
-    <section class="section approach-section py-5 bg-light">
-        <div class="container py-5">
+    <section class="section approach-section">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="approach-image reveal">
-                        <img src="images/approach.jpg" alt="Therapeutic Approach - Counseling Methodology" 
-                             class="img-fluid rounded shadow" loading="lazy" style="max-height: 500px; width: 100%; object-fit: cover;">
+                        <img src="images/approach.png" alt="Therapeutic Approach - Counseling Methodology" 
+                             class="img-fluid rounded" loading="lazy">
                     </div>
                 </div>
                 
@@ -319,17 +848,20 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section py-5" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
-        <div class="container py-5">
+    <section class="section cta-section">
+        <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h2 class="cta-title mb-4 text-white">Begin Your Healing Journey</h2>
-                    <p class="cta-description mb-5 text-white-50">
+                    <h2 class="cta-title mb-4">Begin Your Healing Journey</h2>
+                    <p class="cta-description mb-5">
                         Take the first step towards emotional wellbeing with our compassionate team
                     </p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-light btn-lg">
+                        <a href="contact.html" class="btn btn-light btn-lg mr-3">
                             <i class="fas fa-calendar-alt mr-2"></i> Book Your First Session
+                        </a>
+                        <a href="tel:+917010669191" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone mr-2"></i> Call: +91 7010669191
                         </a>
                     </div>
                 </div>
@@ -426,11 +958,201 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: linear-gradient(45deg, var(--primary), var(--primary-light)); color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3); z-index: 1000; transition: all 0.3s ease;">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script>
+        // ===== PREMIUM ANIMATIONS FOR ABOUT PAGE =====
+        
+        $(document).ready(function() {
+            // Create falling leaves
+            createFallingLeaves();
+            
+            // Scroll animations
+            setupScrollAnimations();
+            
+            // Back to top button
+            setupBackToTop();
+            
+            // Smooth scroll for anchor links
+            setupSmoothScroll();
+            
+            // Hover animations for cards
+            setupCardAnimations();
+            
+            // Initialize animations
+            animateOnScroll();
+        });
+        
+        // Create beautiful falling leaves animation
+        function createFallingLeaves() {
+            const leaves = [
+                '🍃', '🌿', '🍂', '🍁', '🌱', '🍀', '🌾', '☘️',
+                '<i class="fas fa-leaf"></i>',
+                '<i class="fas fa-feather-alt"></i>',
+                '<i class="fas fa-spa"></i>',
+                '<i class="fas fa-seedling"></i>',
+                '<i class="fas fa-heart"></i>'
+            ];
+            
+            const leafColors = [
+                '#2E8B57', // Sea Green
+                '#90EE90', // Light Green
+                '#32CD32', // Lime Green
+                '#98FB98', // Pale Green
+                '#00FF7F', // Spring Green
+                '#3CB371', // Medium Sea Green
+                '#20B2AA', // Light Sea Green
+                '#66CDAA'  // Medium Aquamarine
+            ];
+            
+            const container = $('body');
+            const leafCount = 15; // Less leaves for content page
+            
+            for (let i = 0; i < leafCount; i++) {
+                const leafIndex = Math.floor(Math.random() * leaves.length);
+                const leaf = $(`<div class="leaf">${leaves[leafIndex]}</div>`);
+                
+                // Random properties
+                const left = Math.random() * 100;
+                const duration = 20 + Math.random() * 30; // Slower falling
+                const delay = Math.random() * 15;
+                const size = 0.5 + Math.random() * 1.2;
+                const colorIndex = Math.floor(Math.random() * leafColors.length);
+                const rotation = Math.random() * 360;
+                const leafType = Math.random();
+                
+                // Add different classes based on type
+                if (leafType > 0.7) {
+                    leaf.addClass('leaf-large');
+                } else if (leafType < 0.3) {
+                    leaf.addClass('leaf-small');
+                }
+                
+                leaf.css({
+                    left: left + '%',
+                    top: '-10px',
+                    fontSize: size + 'rem',
+                    color: leafColors[colorIndex],
+                    opacity: 0.2 + Math.random() * 0.4,
+                    animationDuration: duration + 's',
+                    animationDelay: delay + 's',
+                    transform: `rotate(${rotation}deg)`,
+                    filter: `brightness(${0.8 + Math.random() * 0.4})`,
+                    zIndex: Math.floor(Math.random() * 10)
+                });
+                
+                container.append(leaf);
+            }
+        }
+        
+        // Scroll animations
+        function setupScrollAnimations() {
+            function animateOnScroll() {
+                $('.reveal').each(function() {
+                    if ($(this).visible(true)) {
+                        $(this).addClass('active');
+                    }
+                });
+                
+                // Stagger animation for value cards
+                $('.stagger-item').each(function(index) {
+                    if ($(this).visible(true)) {
+                        setTimeout(() => {
+                            $(this).addClass('active');
+                        }, index * 200);
+                    }
+                });
+                
+                // Parallax effect for shapes
+                const scrolled = $(window).scrollTop();
+                $('.shape-1').css('transform', `translate(${scrolled * 0.015}px, ${scrolled * 0.02}px)`);
+                $('.shape-2').css('transform', `translate(${scrolled * -0.01}px, ${scrolled * 0.015}px)`);
+                $('.shape-3').css('transform', `translate(${scrolled * 0.01}px, ${scrolled * -0.01}px)`);
+            }
+            
+            // Initial animation
+            animateOnScroll();
+            
+            // Animate on scroll
+            $(window).on('scroll', animateOnScroll);
+        }
+        
+        // Back to top button
+        function setupBackToTop() {
+            const $backToTop = $('#backToTop');
+            
+            $backToTop.click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+            
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $backToTop.fadeIn();
+                } else {
+                    $backToTop.fadeOut();
+                }
+            });
+        }
+        
+        // Smooth scroll
+        function setupSmoothScroll() {
+            $('a[href^="#"]').on('click', function(event) {
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
+        }
+        
+        // Card hover animations
+        function setupCardAnimations() {
+            $('.qualification-item, .value-card, .mission-point, .method').each(function() {
+                $(this).hover(
+                    function() {
+                        $(this).css('transform', $(this).data('original-transform'));
+                    },
+                    function() {
+                        $(this).css('transform', '');
+                    }
+                );
+            });
+            
+            // Image hover effects
+            $('.founder-image, .mission-image, .approach-image').hover(
+                function() {
+                    $(this).css('transform', 'translateY(-10px)');
+                },
+                function() {
+                    $(this).css('transform', 'translateY(0)');
+                }
+            );
+        }
+        
+        // Visibility check function
+        $.fn.visible = function(partial) {
+            const $t = $(this);
+            const $w = $(window);
+            const viewTop = $w.scrollTop();
+            const viewBottom = viewTop + $w.height();
+            const _top = $t.offset().top;
+            const _bottom = _top + $t.height();
+            const compareTop = partial === true ? _bottom : _top;
+            const compareBottom = partial === true ? _top : _bottom;
+            
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+    </script>
 </body>
 </html>

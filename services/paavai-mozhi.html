@@ -615,45 +615,59 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top main-header">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-spa"></i>
-                <span class="logo-main">THULIR</span>
-                <span class="logo-dot">.</span>
-                <span class="logo-sub">IDAM</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="index.html">Services</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="counselling.html">Counseling</a>
-                            <a class="dropdown-item" href="bold-butterflies.html">Bold Butterflies</a>
-                            <a class="dropdown-item active" href="paavai-mozhi.html">Paavai Mozhi</a>
-                            <a class="dropdown-item" href="the-roots.html">The Roots</a>
-                            <a class="dropdown-item" href="eap.html">EAP</a>
-                            <a class="dropdown-item" href="skill-lab.html">Skill Lab</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="../programs.html">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
-                    <li class="nav-item ml-2">
-                        <a href="tel:+917010669191" class="btn btn-primary btn-paavai">
-                            <i class="fas fa-phone mr-2"></i> Call Now
-                        </a>
-                    </li>
-                </ul>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <i class="fas fa-spa"></i>
+                    <span class="logo-main">THULIR</span>
+                    <span class="logo-dot">.</span>
+                    <span class="logo-sub">IDAM</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="index.html" id="servicesDropdown" 
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="counselling.html">Counselling</a>
+                                <a class="dropdown-item" href="bold-butterflies.html">Bold Butterflies</a>
+                                <a class="dropdown-item" href="paavai-mozhi.html">Paavai Mozhi</a>
+                                <a class="dropdown-item" href="the-roots.html">The Roots</a>
+                                <a class="dropdown-item" href="eap.html">Employee Assistance</a>
+                                <a class="dropdown-item" href="skill-lab.html">Skill Set Lab</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                            <a href="tel:+917010669191" class="btn btn-primary btn-cta">
+                                <i class="fas fa-phone mr-2"></i> Book Consultation
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="paavai-hero">
@@ -999,64 +1013,86 @@
     <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="footer-brand">
-                        <i class="fas fa-spa"></i>
-                        <div>
-                            <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-spa"></i>
+                            <div class="footer-logo-text">
+                                <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            A sanctuary for emotional wellbeing in Coimbatore, providing professional 
+                            mental health counseling and therapeutic programs since 2020.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <p class="footer-description">
-                        Creating sacred spaces for women's wellness and empowerment in Coimbatore since 2020.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="index.html">Our Services</a></li>
+                            <li><a href="../programs.html">Programs</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="col-lg-2 col-md-6 mb-5">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="index.html">Services</a></li>
-                        <li><a href="../programs.html">Programs</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <h5>Women's Programs</h5>
-                    <ul class="footer-links">
-                        <li><a href="paavai-mozhi.html" class="active">Paavai Mozhi</a></li>
-                        <li><a href="counselling.html">Women's Counseling</a></li>
-                        <li><a href="../programs.html">Wellness Workshops</a></li>
-                        <li><a href="skill-lab.html">Personal Development</a></li>
-                        <li><a href="../contact.html">Motherhood Support</a></li>
-                    </ul>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Our Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="counselling.html">Individual Counseling</a></li>
+                            <li><a href="bold-butterflies.html">Student Support</a></li>
+                            <li><a href="paavai-mozhi.html">Women's Wellness</a></li>
+                            <li><a href="the-roots.html">Parent Guidance</a></li>
+                            <li><a href="eap.html">Corporate Programs</a></li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <h5>Contact Info</h5>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+917010669191">+91 7010669191</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a></li>
-                        <li><i class="fas fa-clock"></i> Mon-Sat: 9 AM - 7 PM</li>
-                        <li><i class="fas fa-female"></i> Women's Hours: 10 AM - 2 PM</li>
-                    </ul>
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Coimbatore, Tamil Nadu, India</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+917010669191">+91 7010669191</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 THULIR.IDAM Paavai Mozhi. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="../privacy.html">Privacy Policy</a>
-                    <a href="../terms.html">Terms of Service</a>
-                    <a href="../cancellation.html">Cancellation Policy</a>
+                <div class="footer-bottom-content">
+                    <p class="mb-0">&copy; 2025 THULIR.IDAM. All rights reserved. | A Home For Your Inner Self</p>
+                    <div class="footer-bottom-links">
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms-of-service.html">Terms of Service</a>
+                        <a href="../cancellation-policy.html">Cancellation Policy</a>
+                    </div>
                 </div>
             </div>
         </div>

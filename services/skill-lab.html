@@ -29,18 +29,18 @@
     <style>
         /* ===== SKILL LAB PREMIUM CSS ===== */
         :root {
-            --skill-primary: #FF5722;
-            --skill-secondary: #FF9800;
-            --skill-accent: #4CAF50;
-            --skill-light: #FFF3E0;
-            --skill-dark: #D84315;
-            --skill-blue: #2196F3;
+            --skill-primary: #66BB6A;
+            --skill-secondary: #A5D6A7;
+            --skill-accent: #43A047;
+            --skill-light: #F1F8E9;
+            --skill-dark: #2E7D32;
+            --skill-blue: #4DB6AC;
         }
-        
+
         /* Hero Section */
         .skill-hero {
             padding: 160px 0 100px;
-            background: linear-gradient(135deg, #FFF3E0 0%, #FFECB3 100%);
+            background: linear-gradient(135deg, #E8F5E9 0%, #DCEDC8 100%);
             position: relative;
             overflow: hidden;
             min-height: 90vh;
@@ -71,13 +71,13 @@
             display: inline-flex;
             align-items: center;
             padding: 10px 25px;
-            background: rgba(255, 87, 34, 0.1);
+            background: rgba(63, 128, 62, 0.1) !important;
             color: var(--skill-dark);
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.9rem;
             letter-spacing: 1px;
-            border: 1px solid rgba(255, 87, 34, 0.2);
+            border: 1px solid rgba(21, 32, 20, 0.2);
             animation: skillPulse 3s infinite;
         }
         
@@ -129,14 +129,14 @@
             font-size: 0.9rem;
             font-weight: 500;
             color: var(--skill-dark);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(255, 87, 34, 0.1);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+            border: 1px solid rgba(86, 255, 34, 0.1);
             transition: all 0.3s ease;
         }
         
         .skill-tag:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.1);
             border-color: var(--skill-primary);
         }
         
@@ -154,7 +154,7 @@
         .section-tag {
             display: inline-block;
             padding: 8px 25px;
-            background: rgba(255, 87, 34, 0.1);
+            background: rgba(91, 170, 75, 0.1);
             color: var(--skill-dark);
             border-radius: 50px;
             font-weight: 600;
@@ -217,7 +217,7 @@
             margin: 0 auto 30px;
             font-size: 2.5rem;
             color: var(--skill-primary);
-            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.1);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
             transition: all 0.3s ease;
         }
         
@@ -256,7 +256,7 @@
         }
         
         .workshop-details li:before {
-            content: '⚡';
+            content: '🌿';
             position: absolute;
             left: 0;
             top: 0;
@@ -265,7 +265,7 @@
         /* Learning Paths */
         .paths-section {
             padding: 100px 0;
-            background: linear-gradient(135deg, var(--skill-light) 0%, #FFF8E1 100%);
+            background: linear-gradient(135deg, var(--skill-light) 0%, #e6ffe1 100%);
         }
         
         .path-card {
@@ -373,12 +373,12 @@
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
         }
         
         .btn-skill:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 87, 34, 0.4);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.5);
             color: white;
         }
         
@@ -442,45 +442,59 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top main-header">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-spa"></i>
-                <span class="logo-main">THULIR</span>
-                <span class="logo-dot">.</span>
-                <span class="logo-sub">IDAM</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="index.html">Services</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="counselling.html">Counseling</a>
-                            <a class="dropdown-item" href="bold-butterflies.html">Bold Butterflies</a>
-                            <a class="dropdown-item" href="paavai-mozhi.html">Paavai Mozhi</a>
-                            <a class="dropdown-item" href="the-roots.html">The Roots</a>
-                            <a class="dropdown-item" href="eap.html">EAP</a>
-                            <a class="dropdown-item active" href="skill-lab.html">Skill Lab</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="../programs.html">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
-                    <li class="nav-item ml-2">
-                        <a href="tel:+917010669191" class="btn btn-primary btn-skill">
-                            <i class="fas fa-phone mr-2"></i> Enroll Now
-                        </a>
-                    </li>
-                </ul>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <i class="fas fa-spa"></i>
+                    <span class="logo-main">THULIR</span>
+                    <span class="logo-dot">.</span>
+                    <span class="logo-sub">IDAM</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="index.html" id="servicesDropdown" 
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="counselling.html">Counselling</a>
+                                <a class="dropdown-item" href="bold-butterflies.html">Bold Butterflies</a>
+                                <a class="dropdown-item" href="paavai-mozhi.html">Paavai Mozhi</a>
+                                <a class="dropdown-item" href="the-roots.html">The Roots</a>
+                                <a class="dropdown-item" href="eap.html">Employee Assistance</a>
+                                <a class="dropdown-item" href="skill-lab.html">Skill Set Lab</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                            <a href="tel:+917010669191" class="btn btn-primary btn-cta">
+                                <i class="fas fa-phone mr-2"></i> Book Consultation
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="skill-hero">
@@ -514,7 +528,7 @@
                         
                         <div class="mt-5">
                             <a href="#workshops" class="btn btn-skill btn-lg mr-3 animate__animated animate__pulse animate__delay-2s">
-                                <i class="fas fa-graduation-cap mr-2"></i>View Workshops
+                                <i class="fas fa-heartbeat mr-2"></i>View Workshops
                             </a>
                             <a href="#enroll" class="btn btn-outline-primary btn-lg">
                                 <i class="fas fa-calendar-alt mr-2"></i>Enroll Now
@@ -652,7 +666,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="workshop-card">
                         <div class="workshop-icon">
-                            <i class="fas fa-stress"></i>
+                            <i class="fa fa-street-view"></i>
                         </div>
                         <h3>Stress & Resilience</h3>
                         <p>Build resilience and learn effective stress management techniques for work and life balance.</p>
@@ -819,7 +833,7 @@
                     
                     <div class="cta-buttons">
                         <a href="../contact.html" class="btn btn-light btn-lg mr-3" style="color: var(--skill-primary);">
-                            <i class="fas fa-graduation-cap mr-2"></i>Enroll Now
+                            <i class="fas fa-heartbeat mr-2"></i>Enroll Now
                         </a>
                         <a href="tel:+917010669191" class="btn btn-outline-light btn-lg">
                             <i class="fas fa-phone mr-2"></i>Schedule Demo
@@ -838,64 +852,86 @@
     <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="footer-brand">
-                        <i class="fas fa-spa"></i>
-                        <div>
-                            <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-spa"></i>
+                            <div class="footer-logo-text">
+                                <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            A sanctuary for emotional wellbeing in Coimbatore, providing professional 
+                            mental health counseling and therapeutic programs since 2020.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <p class="footer-description">
-                        Empowering personal and professional growth through transformative skill development programs in Coimbatore.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="index.html">Our Services</a></li>
+                            <li><a href="../programs.html">Programs</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="col-lg-2 col-md-6 mb-5">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="index.html">Services</a></li>
-                        <li><a href="../programs.html">Programs</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <h5>Skill Programs</h5>
-                    <ul class="footer-links">
-                        <li><a href="skill-lab.html" class="active">Skill Set Lab</a></li>
-                        <li><a href="../programs.html">Workshop Calendar</a></li>
-                        <li><a href="counselling.html">Personal Development</a></li>
-                        <li><a href="../contact.html">Corporate Training</a></li>
-                        <li><a href="eap.html">Professional Skills</a></li>
-                    </ul>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Our Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="counselling.html">Individual Counseling</a></li>
+                            <li><a href="bold-butterflies.html">Student Support</a></li>
+                            <li><a href="paavai-mozhi.html">Women's Wellness</a></li>
+                            <li><a href="the-roots.html">Parent Guidance</a></li>
+                            <li><a href="eap.html">Corporate Programs</a></li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <h5>Contact Info</h5>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+917010669191">+91 7010669191</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a></li>
-                        <li><i class="fas fa-clock"></i> Mon-Sat: 9 AM - 7 PM</li>
-                        <li><i class="fas fa-graduation-cap"></i> Workshop Hours: 10 AM - 8 PM</li>
-                    </ul>
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Coimbatore, Tamil Nadu, India</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+917010669191">+91 7010669191</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 THULIR.IDAM Skill Set Lab. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="../privacy.html">Privacy Policy</a>
-                    <a href="../terms.html">Terms of Service</a>
-                    <a href="../cancellation.html">Cancellation Policy</a>
+                <div class="footer-bottom-content">
+                    <p class="mb-0">&copy; 2025 THULIR.IDAM. All rights reserved. | A Home For Your Inner Self</p>
+                    <div class="footer-bottom-links">
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms-of-service.html">Terms of Service</a>
+                        <a href="../cancellation-policy.html">Cancellation Policy</a>
+                    </div>
                 </div>
             </div>
         </div>

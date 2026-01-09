@@ -32,120 +32,10 @@
             --primary: #2E8B57;
             --primary-dark: #1A472A;
             --primary-light: #90EE90;
-            --accent: #FFB6C1;
+            --accent: #d2ffb6;
             --light: #F0FFF0;
             --dark: #1A472A;
             --gold: #D4AF37;
-        }
-        
-        /* Global Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #4a5568;
-            background: var(--light);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: var(--dark);
-        }
-        
-        .section {
-            padding: 100px 0;
-        }
-        
-        @media (max-width: 768px) {
-            .section {
-                padding: 60px 0;
-            }
-        }
-        
-        /* Navigation */
-        .main-header {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(46, 139, 87, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-        
-        .navbar-brand i {
-            color: var(--primary);
-            font-size: 1.8rem;
-        }
-        
-        .logo-dot {
-            color: var(--gold);
-        }
-        
-        .nav-link {
-            font-weight: 600;
-            color: var(--dark) !important;
-            padding: 8px 20px !important;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 20px;
-            right: 20px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--primary-light));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            transform: scaleX(1);
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, var(--primary), var(--primary-light));
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(46, 139, 87, 0.4);
-        }
-        
-        .btn-outline-primary {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline-primary:hover {
-            background: var(--primary);
-            color: white;
         }
         
         /* Hero Section */
@@ -511,7 +401,7 @@
             height: 100%;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(46, 139, 87, 0.05);
+            border: 1px solid rgb(0 90 40 / 30%);
         }
         
         .program-card:hover {
@@ -767,45 +657,59 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top main-header">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-spa"></i>
-                <span class="logo-main">THULIR</span>
-                <span class="logo-dot">.</span>
-                <span class="logo-sub">IDAM</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="services/index.html">Services</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="services/counselling.html">Counseling</a>
-                            <a class="dropdown-item" href="services/bold-butterflies.html">Bold Butterflies</a>
-                            <a class="dropdown-item" href="services/paavai-mozhi.html">Paavai Mozhi</a>
-                            <a class="dropdown-item" href="services/the-roots.html">The Roots</a>
-                            <a class="dropdown-item" href="services/eap.html">EAP</a>
-                            <a class="dropdown-item" href="services/skill-lab.html">Skill Lab</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ml-2">
-                        <a href="tel:+917010669191" class="btn btn-primary">
-                            <i class="fas fa-phone mr-2"></i> Book Session
-                        </a>
-                    </li>
-                </ul>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-spa"></i>
+                    <span class="logo-main">THULIR</span>
+                    <span class="logo-dot">.</span>
+                    <span class="logo-sub">IDAM</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" 
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="services/counselling.html">Counselling</a>
+                                <a class="dropdown-item" href="services/bold-butterflies.html">Bold Butterflies</a>
+                                <a class="dropdown-item" href="services/paavai-mozhi.html">Paavai Mozhi</a>
+                                <a class="dropdown-item" href="services/the-roots.html">The Roots</a>
+                                <a class="dropdown-item" href="services/eap.html">Employee Assistance</a>
+                                <a class="dropdown-item" href="services/skill-lab.html">Skill Set Lab</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                            <a href="tel:+917010669191" class="btn btn-primary">
+                                <i class="fas fa-phone mr-2"></i> Call Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -850,7 +754,7 @@
                         </div>
                         
                         <div class="mt-5">
-                            <a href="contact.html" class="btn btn-primary btn-lg mr-3 animate__animated animate__pulse animate__delay-2s">
+                            <a href="contact.html" class="btn btn-primary btn-lg mb-4 mb-lg-0 mr-3 animate__animated animate__pulse animate__delay-2s">
                                 <i class="fas fa-calendar-check mr-2"></i> Begin Healing
                             </a>
                             <a href="#services" class="btn btn-outline-primary btn-lg">
@@ -943,7 +847,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-butterfly"></i>
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
                         <h3>Bold Butterflies</h3>
                         <p>Student empowerment programs for academic stress, exam anxiety, and teen mental wellness.</p>
@@ -1044,7 +948,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="about-image">
-                        <img src="images/therapist-office.jpg" alt="R.C. Nandhini - Professional Counselor" class="img-fluid">
+                        <img src="images/nandhini.png" alt="R.C. Nandhini - Professional Counselor" class="img-fluid">
                     </div>
                 </div>
                 
@@ -1062,7 +966,7 @@
                         
                         <div class="qualifications mb-4">
                             <span class="qualification-item">
-                                <i class="fas fa-graduation-cap mr-2"></i>
+                                <i class="fas fa-heartbeat mr-2"></i>
                                 <span>M.A. Psychology</span>
                             </span>
                             <span class="qualification-item">
@@ -1586,7 +1490,7 @@
                 
                 leaf.css({
                     left: left + '%',
-                    top: '-50px',
+                    top: '-10px',
                     fontSize: size + 'rem',
                     color: leafColors[colorIndex],
                     opacity: 0.3 + Math.random() * 0.5,

@@ -61,7 +61,7 @@
 /* Hero Section */
 .counseling-hero-section {
     padding: 160px 0 100px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #F1F8E9 0%, #C8E6C9 100%);
     position: relative;
     overflow: hidden;
     color: white;
@@ -118,7 +118,7 @@
     display: inline-flex;
     align-items: center;
     padding: 10px 25px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(34, 82, 58, 0.471);
     backdrop-filter: blur(10px);
     border-radius: 50px;
     font-weight: 600;
@@ -148,6 +148,7 @@
     opacity: 0.9;
     max-width: 600px;
     margin-bottom: 30px;
+    color: #000;
 }
 
 .hero-cta .btn {
@@ -212,6 +213,7 @@
     font-size: 0.8rem;
     margin-top: 10px;
     font-weight: 600;
+    color: #000;
 }
 
 .card-1 {
@@ -237,30 +239,6 @@
 @keyframes float-card {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-.hero-stats {
-    margin-top: 80px;
-    padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.stat-label {
-    font-size: 1rem;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Therapies Section */
@@ -402,7 +380,7 @@
 
 .nav-pills .nav-link.active {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
+    color: white !important;
     box-shadow: 0 10px 30px rgba(178, 206, 63, 0.3);
 }
 
@@ -462,17 +440,6 @@
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.process-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 3px;
-    background: linear-gradient(180deg, var(--primary), var(--secondary));
-    transform: translateX(-50%);
 }
 
 .process-step {
@@ -547,7 +514,7 @@
 /* Booking Section */
 .booking-section {
     padding: 120px 0;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: linear-gradient(135deg, #2e8b5742, #1a472ac9);
     color: white;
     position: relative;
     overflow: hidden;
@@ -594,7 +561,7 @@
 }
 
 .feature i {
-    color: var(--accent);
+    color: #d2ffb6;
     margin-right: 10px;
     font-size: 1.2rem;
 }
@@ -642,59 +609,6 @@
     margin-right: 15px;
     font-size: 1.2rem;
     width: 30px;
-}
-
-/* FAQ Section */
-.faq-section {
-    padding: 120px 0;
-    background: var(--light);
-}
-
-.faq-item {
-    background: white;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-}
-
-.faq-header .btn {
-    width: 100%;
-    text-align: left;
-    padding: 25px 30px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--dark);
-    text-decoration: none;
-    background: white;
-    border: none;
-    position: relative;
-}
-
-.faq-header .btn::after {
-    content: '+';
-    position: absolute;
-    right: 30px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--primary);
-    transition: transform 0.3s ease;
-}
-
-.faq-header .btn.collapsed::after {
-    content: '+';
-    transform: rotate(0);
-}
-
-.faq-header .btn:not(.collapsed)::after {
-    content: '−';
-    transform: rotate(0);
-}
-
-.faq-body {
-    padding: 0 30px 25px;
-    color: var(--gray);
-    line-height: 1.8;
 }
 
 /* Responsive */
@@ -747,6 +661,7 @@
         width: 80px;
         height: 80px;
         font-size: 1.5rem;
+        padding: 1rem;
     }
 }
 
@@ -771,45 +686,59 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top main-header">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-spa"></i>
-                <span class="logo-main">THULIR</span>
-                <span class="logo-dot">.</span>
-                <span class="logo-sub">IDAM</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="index.html">Services</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item active" href="counselling.html">Counseling</a>
-                            <a class="dropdown-item" href="bold-butterflies.html">Bold Butterflies</a>
-                            <a class="dropdown-item" href="paavai-mozhi.html">Paavai Mozhi</a>
-                            <a class="dropdown-item" href="the-roots.html">The Roots</a>
-                            <a class="dropdown-item" href="eap.html">EAP</a>
-                            <a class="dropdown-item" href="skill-lab.html">Skill Lab</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="../programs.html">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
-                    <li class="nav-item ml-2">
-                        <a href="tel:+917010669191" class="btn btn-primary">
-                            <i class="fas fa-phone mr-2"></i> Book Now
-                        </a>
-                    </li>
-                </ul>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <i class="fas fa-spa"></i>
+                    <span class="logo-main">THULIR</span>
+                    <span class="logo-dot">.</span>
+                    <span class="logo-sub">IDAM</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="index.html" id="servicesDropdown" 
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="counselling.html">Counselling</a>
+                                <a class="dropdown-item" href="bold-butterflies.html">Bold Butterflies</a>
+                                <a class="dropdown-item" href="paavai-mozhi.html">Paavai Mozhi</a>
+                                <a class="dropdown-item" href="the-roots.html">The Roots</a>
+                                <a class="dropdown-item" href="eap.html">Employee Assistance</a>
+                                <a class="dropdown-item" href="skill-lab.html">Skill Set Lab</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+                            <a href="tel:+917010669191" class="btn btn-primary btn-cta">
+                                <i class="fas fa-phone mr-2"></i> Book Consultation
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="counseling-hero-section">
@@ -839,10 +768,10 @@
                         </p>
                         
                         <div class="hero-cta mt-5">
-                            <a href="#booking" class="btn btn-primary btn-lg mr-3 animate__animated animate__pulse animate__delay-2s">
+                            <a href="#booking" class="btn btn-primary btn-lg mr-3 mb-3 mb-lg-0 animate__animated animate__pulse animate__delay-2s">
                                 <i class="fas fa-calendar-check mr-2"></i>Book Session
                             </a>
-                            <a href="#therapies" class="btn btn-outline-light btn-lg">
+                            <a href="#therapies" class="btn btn-outline-success btn-lg">
                                 <i class="fas fa-play-circle mr-2"></i>Our Therapies
                             </a>
                         </div>
@@ -854,15 +783,15 @@
                         <div class="image-container">
                             <div class="floating-cards">
                                 <div class="card card-1">
-                                    <i class="fas fa-brain"></i>
+                                    <i class="fas fa-brain" style="color: #10B981;"></i>
                                     <span>Mind Healing</span>
                                 </div>
                                 <div class="card card-2">
-                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart" style="color: #10B981;"></i>
                                     <span>Heart Wellness</span>
                                 </div>
                                 <div class="card card-3">
-                                    <i class="fas fa-balance-scale"></i>
+                                    <i class="fas fa-balance-scale" style="color: #10B981;"></i>
                                     <span>Life Balance</span>
                                 </div>
                             </div>
@@ -871,34 +800,6 @@
                 </div>
             </div>
             
-            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
-                <div class="row">
-                    <div class="col-md-3 col-6">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="1500">0</div>
-                            <div class="stat-label">Sessions Completed</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="98">0</div>
-                            <div class="stat-label">Success Rate %</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="10">0</div>
-                            <div class="stat-label">Therapy Methods</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="24">0</div>
-                            <div class="stat-label">Hour Support</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1214,101 +1115,91 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-subtitle">Questions</span>
-                <h2 class="section-title">Counseling <span class="gradient-text">FAQs</span></h2>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="faq-item" data-aos="fade-up">
-                            <div class="faq-header" id="heading1">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#faq1">
-                                        How long does counseling typically take?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="faq1" class="collapse show" data-parent="#faqAccordion">
-                                <div class="faq-body">
-                                    Counseling duration varies based on individual needs. Some clients benefit from 6-8 sessions, 
-                                    while others may prefer longer-term support. We assess progress regularly and adjust accordingly.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- More FAQ items -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="footer-brand">
-                        <i class="fas fa-spa"></i>
-                        <div>
-                            <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-spa"></i>
+                            <div class="footer-logo-text">
+                                <span>THULIR</span><span class="logo-dot">.</span><span>IDAM</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            A sanctuary for emotional wellbeing in Coimbatore, providing professional 
+                            mental health counseling and therapeutic programs since 2020.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <p class="footer-description">
-                        A sanctuary for emotional healing in Coimbatore, offering premium counseling 
-                        and therapy services since 2020.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="index.html">Our Services</a></li>
+                            <li><a href="../programs.html">Programs</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="col-lg-2 col-md-6 mb-5">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="index.html">Services</a></li>
-                        <li><a href="../programs.html">Programs</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <h5>Our Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="counselling.html">Counseling</a></li>
-                        <li><a href="bold-butterflies.html">Student Support</a></li>
-                        <li><a href="paavai-mozhi.html">Women's Wellness</a></li>
-                        <li><a href="the-roots.html">Parent Guidance</a></li>
-                        <li><a href="eap.html">Corporate EAP</a></li>
-                    </ul>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Our Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="counselling.html">Individual Counseling</a></li>
+                            <li><a href="bold-butterflies.html">Student Support</a></li>
+                            <li><a href="paavai-mozhi.html">Women's Wellness</a></li>
+                            <li><a href="the-roots.html">Parent Guidance</a></li>
+                            <li><a href="eap.html">Corporate Programs</a></li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <h5>Contact Info</h5>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+917010669191">+91 7010669191</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a></li>
-                        <li><i class="fas fa-clock"></i> Mon-Sat: 9 AM - 7 PM</li>
-                    </ul>
+                    <div class="footer-section">
+                        <h3 class="h5 mb-4">Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Coimbatore, Tamil Nadu, India</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+917010669191">+91 7010669191</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 THULIR.IDAM. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="../privacy.html">Privacy</a>
-                    <a href="../terms.html">Terms</a>
+                <div class="footer-bottom-content">
+                    <p class="mb-0">&copy; 2025 THULIR.IDAM. All rights reserved. | A Home For Your Inner Self</p>
+                    <div class="footer-bottom-links">
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms-of-service.html">Terms of Service</a>
+                        <a href="../cancellation-policy.html">Cancellation Policy</a>
+                    </div>
                 </div>
             </div>
         </div>

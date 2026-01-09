@@ -13,17 +13,491 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        /* ===== PREMIUM PROGRAMS PAGE CSS ===== */
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1A472A;
+            --primary-light: #90EE90;
+            --accent: #FFB6C1;
+            --light: #F0FFF0;
+            --dark: #1A472A;
+            --gold: #D4AF37;
+            --text-dark: #1A472A;
+            --text-light: #4a5568;
+            --shadow: rgba(46, 139, 87, 0.15);
+        }
+        
+        
+        /* Hero Section */
+        .page-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, #F0FFF0 0%, #E8F5E8 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+        }
+        
+        .hero-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(46, 139, 87, 0.05);
+            animation: floatShape 20s linear infinite;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+            background: rgba(144, 238, 144, 0.05);
+            animation-delay: 5s;
+        }
+        
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            top: 30%;
+            right: 15%;
+            background: rgba(255, 182, 193, 0.05);
+            animation-delay: 10s;
+        }
+        
+        @keyframes floatShape {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, 20px) rotate(90deg); }
+            50% { transform: translate(0, 40px) rotate(180deg); }
+            75% { transform: translate(-20px, 20px) rotate(270deg); }
+        }
+        
+        .page-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .page-hero .lead {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Programs Section */
+        .programs-section {
+            background: white;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        
+        /* Program Cards */
+        .program-feature {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            height: 100%;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px var(--shadow);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .program-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .program-feature:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .program-feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(46, 139, 87, 0.2);
+            border-color: rgba(46, 139, 87, 0.1);
+        }
+        
+        .program-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--light), white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--primary);
+            box-shadow: 0 10px 20px rgba(46, 139, 87, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .program-feature:hover .program-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+        }
+        
+        /* Detailed Program Sections */
+        .program-detail {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(46, 139, 87, 0.1);
+        }
+        
+        .program-detail:last-of-type {
+            border-bottom: none;
+        }
+        
+        .program-detail-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow);
+            transition: transform 0.5s ease;
+        }
+        
+        .program-detail-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        .program-detail-content {
+            padding-left: 40px;
+        }
+        
+        @media (max-width: 992px) {
+            .program-detail-content {
+                padding-left: 0;
+                margin-top: 40px;
+            }
+        }
+        
+        .program-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+        }
+        
+        .program-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .program-highlights li {
+            margin-bottom: 12px;
+            padding-left: 35px;
+            position: relative;
+            color: var(--text-light);
+        }
+        
+        .program-highlights li::before {
+            content: '🌿';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+        }
+        
+        .program-info-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(46, 139, 87, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .program-info-item:hover {
+            transform: translateX(5px);
+            border-color: var(--primary);
+            background: white;
+        }
+        
+        .program-info-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .program-info-item:hover i {
+            transform: scale(1.2);
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefits-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--primary);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1);
+            background: var(--primary-light);
+            color: var(--dark);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--light) 0%, #F8FFF8 100%);
+            position: relative;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .stagger-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .page-hero h1,
+            .cta-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .page-hero .lead {
+                font-size: 1.1rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .program-detail-content {
+                padding-left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 150px 0 80px;
+                margin-top: 70px;
+            }
+            
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .program-feature,
+            .benefit-card {
+                padding: 30px 20px;
+            }
+            
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .btn-primary,
+            .btn-outline-primary,
+            .btn-light {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -51,7 +525,7 @@
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="services/index.html" id="servicesDropdown" 
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" 
                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Services
                             </a>
@@ -82,13 +556,31 @@
     </header>
 
     <!-- Programs Hero -->
-    <section class="py-5" style="background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%); margin-top: 80px;">
-        <div class="container py-5">
+    <section class="page-hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="floating-element" style="animation-delay: 0s; top: 20%; left: 10%;">
+            <i class="fas fa-users fa-3x" style="color: var(--primary);"></i>
+        </div>
+        <div class="floating-element" style="animation-delay: 2s; top: 40%; right: 15%;">
+            <i class="fas fa-heart fa-3x" style="color: var(--primary-light);"></i>
+        </div>
+        <div class="floating-element" style="animation-delay: 4s; bottom: 20%; left: 20%;">
+            <i class="fas fa-brain fa-3x" style="color: var(--accent);"></i>
+        </div>
+        
+        <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h1 class="display-4 font-weight-bold mb-4">Specialized Therapeutic Programs</h1>
-                    <p class="lead text-muted mb-5">Comprehensive programs designed for specific needs, age groups, and healing goals</p>
-                    <a href="#program-list" class="btn btn-primary btn-lg">
+                    <h1 class="animate__animated animate__fadeInDown">Specialized Therapeutic Programs</h1>
+                    <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+                        Comprehensive programs designed for specific needs, age groups, and healing goals
+                    </p>
+                    <a href="#program-list" class="btn btn-primary btn-lg animate__animated animate__pulse animate__delay-2s">
                         <i class="fas fa-arrow-down mr-2"></i> Explore Programs
                     </a>
                 </div>
@@ -97,230 +589,240 @@
     </section>
 
     <!-- Programs Overview -->
-    <section class="py-5 bg-light" id="program-list">
-        <div class="container py-5">
+    <section class="section programs-section" id="program-list">
+        <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
-                    <h2 class="display-5 font-weight-bold mb-4">Our Therapeutic Programs</h2>
-                    <p class="lead text-muted">Evidence-based programs tailored to support emotional wellbeing across all life stages</p>
+                    <h2 class="section-title mb-3">Our Therapeutic Programs</h2>
+                    <p class="section-subtitle">
+                        Evidence-based programs tailored to support emotional wellbeing across all life stages
+                    </p>
                 </div>
             </div>
             
             <!-- Group Therapy Program -->
-            <div class="row align-items-center mb-5 pb-5 border-bottom">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="program-image">
-                        <img src="images/group-therapy.jpg" alt="Group Therapy Sessions Coimbatore" 
-                             class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="program-content">
-                        <span class="badge badge-primary mb-3">Most Popular</span>
-                        <h3 class="h2 mb-4">Group Therapy Sessions</h3>
-                        <p class="lead mb-4">Shared healing experiences in supportive, confidential group environments facilitated by experienced counselors.</p>
-                        
-                        <div class="program-details mb-4">
-                            <h5 class="mb-3">Program Highlights:</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Small groups (6-8 participants)</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Weekly 90-minute sessions</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Themed discussions and activities</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Confidential and safe environment</li>
-                                <li><i class="fas fa-check-circle text-success mr-2"></i> Peer support and shared experiences</li>
-                            </ul>
+            <div class="program-detail reveal">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="program-detail-image">
+                            <img src="images/program1.png" alt="Group Therapy Sessions Coimbatore" 
+                                 class="img-fluid rounded" loading="lazy">
                         </div>
-                        
-                        <div class="program-info">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-clock text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">Duration</h6>
-                                            <p class="mb-0 text-muted">8 weeks program</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="program-detail-content">
+                            <span class="program-badge">Most Popular</span>
+                            <h3 class="h2 mb-4">Group Therapy Sessions</h3>
+                            <p class="lead mb-4">Shared healing experiences in supportive, confidential group environments facilitated by experienced counselors.</p>
+                            
+                            <div class="mb-4">
+                                <h5 class="h5 mb-3">Program Highlights:</h5>
+                                <ul class="program-highlights">
+                                    <li>Small groups (6-8 participants)</li>
+                                    <li>Weekly 90-minute sessions</li>
+                                    <li>Themed discussions and activities</li>
+                                    <li>Confidential and safe environment</li>
+                                    <li>Peer support and shared experiences</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="program-info mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-clock"></i>
+                                            <div>
+                                                <h6 class="mb-1">Duration</h6>
+                                                <p class="mb-0">8 weeks program</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-users text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">Group Size</h6>
-                                            <p class="mb-0 text-muted">6-8 participants</p>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-users"></i>
+                                            <div>
+                                                <h6 class="mb-1">Group Size</h6>
+                                                <p class="mb-0">6-8 participants</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-check mr-2"></i> Join Program
+                            </a>
                         </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3">
-                            <i class="fas fa-calendar-check mr-2"></i> Join Program
-                        </a>
                     </div>
                 </div>
             </div>
             
             <!-- Kids Emotional Wellness Program -->
-            <div class="row align-items-center mb-5 pb-5 border-bottom">
-                <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
-                    <div class="program-image">
-                        <img src="images/kids-program.jpg" alt="Kids Emotional Wellness Camp Coimbatore" 
-                             class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="program-content">
-                        <span class="badge badge-success mb-3">For Children (5-12 years)</span>
-                        <h3 class="h2 mb-4">Kids Emotional Wellness Camp</h3>
-                        <p class="lead mb-4">Creative and engaging camps designed to develop emotional intelligence, resilience, and social skills in children.</p>
-                        
-                        <div class="program-details mb-4">
-                            <h5 class="mb-3">Program Features:</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Age-appropriate activities (5-8, 9-12 years)</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Art and play therapy techniques</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Emotional regulation skills</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Social skills development</li>
-                                <li><i class="fas fa-check-circle text-success mr-2"></i> Parent-child interactive sessions</li>
-                            </ul>
+            <div class="program-detail reveal">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2">
+                        <div class="program-detail-image">
+                            <img src="images/program2.png" alt="Kids Emotional Wellness Camp Coimbatore" 
+                                 class="img-fluid rounded" loading="lazy">
                         </div>
-                        
-                        <div class="program-info">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-calendar-alt text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">Schedule</h6>
-                                            <p class="mb-0 text-muted">Weekend camps (Sat-Sun)</p>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="program-detail-content">
+                            <span class="program-badge" style="background: linear-gradient(45deg, #4CAF50, #81C784);">For Children (5-12 years)</span>
+                            <h3 class="h2 mb-4">Kids Emotional Wellness Camp</h3>
+                            <p class="lead mb-4">Creative and engaging camps designed to develop emotional intelligence, resilience, and social skills in children.</p>
+                            
+                            <div class="mb-4">
+                                <h5 class="h5 mb-3">Program Features:</h5>
+                                <ul class="program-highlights">
+                                    <li>Age-appropriate activities (5-8, 9-12 years)</li>
+                                    <li>Art and play therapy techniques</li>
+                                    <li>Emotional regulation skills</li>
+                                    <li>Social skills development</li>
+                                    <li>Parent-child interactive sessions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="program-info mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div>
+                                                <h6 class="mb-1">Schedule</h6>
+                                                <p class="mb-0">Weekend camps (Sat-Sun)</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-child text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">Age Group</h6>
-                                            <p class="mb-0 text-muted">5-12 years</p>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-child"></i>
+                                            <div>
+                                                <h6 class="mb-1">Age Group</h6>
+                                                <p class="mb-0">5-12 years</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-check mr-2"></i> Enroll Your Child
+                            </a>
                         </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3">
-                            <i class="fas fa-calendar-check mr-2"></i> Enroll Your Child
-                        </a>
                     </div>
                 </div>
             </div>
             
             <!-- Creative Therapy Workshop -->
-            <div class="row align-items-center mb-5 pb-5 border-bottom">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="program-image">
-                        <img src="images/creative-therapy.jpg" alt="Creative Therapy Workshops Coimbatore" 
-                             class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="program-content">
-                        <span class="badge badge-info mb-3">Art & Expression</span>
-                        <h3 class="h2 mb-4">Creative Therapy Workshops</h3>
-                        <p class="lead mb-4">Express emotions and find healing through art, music, writing, and creative modalities in guided therapeutic sessions.</p>
-                        
-                        <div class="program-details mb-4">
-                            <h5 class="mb-3">Workshop Modules:</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-palette text-success mr-2"></i> <strong>Art Therapy:</strong> Painting, drawing, and collage for emotional expression</li>
-                                <li class="mb-2"><i class="fas fa-music text-success mr-2"></i> <strong>Music Therapy:</strong> Guided listening and rhythm exercises</li>
-                                <li class="mb-2"><i class="fas fa-book text-success mr-2"></i> <strong>Journaling:</strong> Therapeutic writing and storytelling</li>
-                                <li><i class="fas fa-hands text-success mr-2"></i> <strong>Clay Therapy:</strong> Sculpting and tactile creative work</li>
-                            </ul>
+            <div class="program-detail reveal">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="program-detail-image">
+                            <img src="images/program3.png" alt="Creative Therapy Workshops Coimbatore" 
+                                 class="img-fluid rounded" loading="lazy">
                         </div>
-                        
-                        <div class="program-info">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-calendar text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">Format</h6>
-                                            <p class="mb-0 text-muted">Weekend workshops</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="program-detail-content">
+                            <span class="program-badge" style="background: linear-gradient(45deg, #2196F3, #64B5F6);">Art & Expression</span>
+                            <h3 class="h2 mb-4">Creative Therapy Workshops</h3>
+                            <p class="lead mb-4">Express emotions and find healing through art, music, writing, and creative modalities in guided therapeutic sessions.</p>
+                            
+                            <div class="mb-4">
+                                <h5 class="h5 mb-3">Workshop Modules:</h5>
+                                <ul class="program-highlights">
+                                    <li><strong>Art Therapy:</strong> Painting, drawing, and collage for emotional expression</li>
+                                    <li><strong>Music Therapy:</strong> Guided listening and rhythm exercises</li>
+                                    <li><strong>Journaling:</strong> Therapeutic writing and storytelling</li>
+                                    <li><strong>Clay Therapy:</strong> Sculpting and tactile creative work</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="program-info mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-calendar"></i>
+                                            <div>
+                                                <h6 class="mb-1">Format</h6>
+                                                <p class="mb-0">Weekend workshops</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-clock text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">Duration</h6>
-                                            <p class="mb-0 text-muted">4-6 hours per workshop</p>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-clock"></i>
+                                            <div>
+                                                <h6 class="mb-1">Duration</h6>
+                                                <p class="mb-0">4-6 hours per workshop</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-paint-brush mr-2"></i> Join Workshop
+                            </a>
                         </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3">
-                            <i class="fas fa-paint-brush mr-2"></i> Join Workshop
-                        </a>
                     </div>
                 </div>
             </div>
             
             <!-- Corporate Wellness Program -->
-            <div class="row align-items-center mb-5 pb-5">
-                <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
-                    <div class="program-image">
-                        <img src="images/corporate-wellness.jpg" alt="Corporate Wellness Programs Coimbatore" 
-                             class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="program-content">
-                        <span class="badge badge-warning mb-3">For Organizations</span>
-                        <h3 class="h2 mb-4">Corporate Wellness Programs</h3>
-                        <p class="lead mb-4">Comprehensive workplace mental health programs designed to enhance employee wellbeing, productivity, and team dynamics.</p>
-                        
-                        <div class="program-details mb-4">
-                            <h5 class="mb-3">Program Components:</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Stress management workshops</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Team building and communication skills</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Leadership mental fitness training</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Work-life balance strategies</li>
-                                <li><i class="fas fa-check-circle text-success mr-2"></i> Customized wellness plans for organizations</li>
-                            </ul>
+            <div class="program-detail reveal">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2">
+                        <div class="program-detail-image">
+                            <img src="images/program4.png" alt="Corporate Wellness Programs Coimbatore" 
+                                 class="img-fluid rounded" loading="lazy">
                         </div>
-                        
-                        <div class="program-info">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-building text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">For</h6>
-                                            <p class="mb-0 text-muted">Companies & Organizations</p>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="program-detail-content">
+                            <span class="program-badge" style="background: linear-gradient(45deg, #FF9800, #FFB74D);">For Organizations</span>
+                            <h3 class="h2 mb-4">Corporate Wellness Programs</h3>
+                            <p class="lead mb-4">Comprehensive workplace mental health programs designed to enhance employee wellbeing, productivity, and team dynamics.</p>
+                            
+                            <div class="mb-4">
+                                <h5 class="h5 mb-3">Program Components:</h5>
+                                <ul class="program-highlights">
+                                    <li>Stress management workshops</li>
+                                    <li>Team building and communication skills</li>
+                                    <li>Leadership mental fitness training</li>
+                                    <li>Work-life balance strategies</li>
+                                    <li>Customized wellness plans for organizations</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="program-info mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-building"></i>
+                                            <div>
+                                                <h6 class="mb-1">For</h6>
+                                                <p class="mb-0">Companies & Organizations</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-user-tie text-primary mr-3 fa-lg"></i>
-                                        <div>
-                                            <h6 class="mb-1">Participants</h6>
-                                            <p class="mb-0 text-muted">10-500 employees</p>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="program-info-item d-flex align-items-center">
+                                            <i class="fas fa-user-tie"></i>
+                                            <div>
+                                                <h6 class="mb-1">Participants</h6>
+                                                <p class="mb-0">10-500 employees</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-briefcase mr-2"></i> Request Proposal
+                            </a>
                         </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3">
-                            <i class="fas fa-briefcase mr-2"></i> Request Proposal
-                        </a>
                     </div>
                 </div>
             </div>
@@ -328,72 +830,66 @@
     </section>
 
     <!-- Additional Programs Grid -->
-    <section class="py-5">
-        <div class="container py-5">
+    <section class="section" style="background: linear-gradient(135deg, var(--light) 0%, #F8FFF8 100%);">
+        <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
-                    <h2 class="display-5 font-weight-bold mb-4">More Specialized Programs</h2>
-                    <p class="lead text-muted">Additional therapeutic programs for specific needs and groups</p>
+                    <h2 class="section-title mb-3">More Specialized Programs</h2>
+                    <p class="section-subtitle">Additional therapeutic programs for specific needs and groups</p>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-4">
-                                <i class="fas fa-brain fa-3x text-primary mb-3"></i>
-                                <h4 class="h5 mb-3">Mindfulness & Meditation</h4>
-                            </div>
-                            <p class="text-muted mb-4">Learn mindfulness techniques and meditation practices for stress reduction and emotional balance.</p>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Guided meditation sessions</li>
-                                <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Mindfulness exercises</li>
-                                <li><i class="fas fa-check text-success mr-2"></i> Breathwork techniques</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="contact.html" class="btn btn-outline-primary btn-sm">Learn More</a>
-                            </div>
+                <div class="col-md-6 col-lg-4 mb-4 stagger-item">
+                    <div class="program-feature text-center">
+                        <div class="program-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Mindfulness & Meditation</h3>
+                        <p class="text-muted mb-4">Learn mindfulness techniques and meditation practices for stress reduction and emotional balance.</p>
+                        <ul class="program-highlights text-left mb-4">
+                            <li>Guided meditation sessions</li>
+                            <li>Mindfulness exercises</li>
+                            <li>Breathwork techniques</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-4">
-                                <i class="fas fa-heart fa-3x text-primary mb-3"></i>
-                                <h4 class="h5 mb-3">Parenting Support Groups</h4>
-                            </div>
-                            <p class="text-muted mb-4">Supportive groups for parents navigating challenges and seeking effective parenting strategies.</p>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Peer support sessions</li>
-                                <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Expert guidance</li>
-                                <li><i class="fas fa-check text-success mr-2"></i> Practical strategies</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="contact.html" class="btn btn-outline-primary btn-sm">Learn More</a>
-                            </div>
+                <div class="col-md-6 col-lg-4 mb-4 stagger-item">
+                    <div class="program-feature text-center">
+                        <div class="program-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Parenting Support Groups</h3>
+                        <p class="text-muted mb-4">Supportive groups for parents navigating challenges and seeking effective parenting strategies.</p>
+                        <ul class="program-highlights text-left mb-4">
+                            <li>Peer support sessions</li>
+                            <li>Expert guidance</li>
+                            <li>Practical strategies</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body p-4">
-                            <div class="text-center mb-4">
-                                <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
-                                <h4 class="h5 mb-3">Teen Resilience Program</h4>
-                            </div>
-                            <p class="text-muted mb-4">Specialized program for teenagers focusing on building resilience and coping skills.</p>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Age-appropriate counseling</li>
-                                <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Peer group sessions</li>
-                                <li><i class="fas fa-check text-success mr-2"></i> Academic stress management</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="contact.html" class="btn btn-outline-primary btn-sm">Learn More</a>
-                            </div>
+                <div class="col-md-6 col-lg-4 mb-4 stagger-item">
+                    <div class="program-feature text-center">
+                        <div class="program-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Teen Resilience Program</h3>
+                        <p class="text-muted mb-4">Specialized program for teenagers focusing on building resilience and coping skills.</p>
+                        <ul class="program-highlights text-left mb-4">
+                            <li>Age-appropriate counseling</li>
+                            <li>Peer group sessions</li>
+                            <li>Academic stress management</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -402,50 +898,50 @@
     </section>
 
     <!-- Program Benefits -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container py-5">
+    <section class="section benefits-section">
+        <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
-                    <h2 class="display-5 font-weight-bold mb-4">Benefits of Our Programs</h2>
-                    <p class="lead opacity-75">Experience transformative benefits through our structured therapeutic programs</p>
+                    <h2 class="mb-4 text-white">Benefits of Our Programs</h2>
+                    <p class="lead opacity-75 mb-5">Experience transformative benefits through our structured therapeutic programs</p>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="text-center p-4">
-                        <div class="rounded-circle bg-white text-primary d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                            <i class="fas fa-users fa-2x"></i>
+                <div class="col-md-6 col-lg-3 mb-4 stagger-item">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
                         </div>
                         <h4 class="h5 mb-3">Community Support</h4>
                         <p class="opacity-75 mb-0">Connect with others sharing similar experiences in a safe, supportive environment.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="text-center p-4">
-                        <div class="rounded-circle bg-white text-primary d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                            <i class="fas fa-brain fa-2x"></i>
+                <div class="col-md-6 col-lg-3 mb-4 stagger-item">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
                         <h4 class="h5 mb-3">Skill Development</h4>
                         <p class="opacity-75 mb-0">Learn practical coping skills and emotional regulation techniques.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="text-center p-4">
-                        <div class="rounded-circle bg-white text-primary d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                            <i class="fas fa-heart fa-2x"></i>
+                <div class="col-md-6 col-lg-3 mb-4 stagger-item">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
                         </div>
                         <h4 class="h5 mb-3">Holistic Healing</h4>
                         <p class="opacity-75 mb-0">Address emotional, mental, and social aspects of wellbeing.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="text-center p-4">
-                        <div class="rounded-circle bg-white text-primary d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                            <i class="fas fa-chart-line fa-2x"></i>
+                <div class="col-md-6 col-lg-3 mb-4 stagger-item">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
                         <h4 class="h5 mb-3">Structured Progress</h4>
                         <p class="opacity-75 mb-0">Follow a structured program with measurable progress and outcomes.</p>
@@ -456,19 +952,19 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-5" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
-        <div class="container py-5">
+    <section class="section cta-section">
+        <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h2 class="cta-title mb-4 text-white">Ready to Join a Program?</h2>
-                    <p class="cta-description mb-5 text-white-50">
+                    <h2 class="cta-title mb-4">Ready to Join a Program?</h2>
+                    <p class="cta-description mb-5">
                         Take the first step towards healing and growth. Contact us to find the right program for you.
                     </p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-light btn-lg mr-3 mb-3">
+                        <a href="contact.html" class="btn btn-primary btn-lg mr-3 mb-3">
                             <i class="fas fa-calendar-alt mr-2"></i> Schedule Consultation
                         </a>
-                        <a href="tel:+917010669191" class="btn btn-outline-light btn-lg mb-3">
+                        <a href="tel:+917010669191" class="btn btn-outline-primary btn-lg mb-3">
                             <i class="fas fa-phone mr-2"></i> Call: +91 7010669191
                         </a>
                     </div>
@@ -538,11 +1034,11 @@
                             </li>
                             <li>
                                 <i class="fas fa-phone"></i>
-                                <a href="tel:+917010669191" class="text-white">+91 7010669191</a>
+                                <a href="tel:+917010669191">+91 7010669191</a>
                             </li>
                             <li>
                                 <i class="fas fa-envelope"></i>
-                                <a href="mailto:thuliridam2025@gmail.com" class="text-white">thuliridam2025@gmail.com</a>
+                                <a href="mailto:thuliridam2025@gmail.com">thuliridam2025@gmail.com</a>
                             </li>
                             <li>
                                 <i class="fas fa-clock"></i>
@@ -566,11 +1062,185 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: linear-gradient(45deg, var(--primary), var(--primary-light)); color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3); z-index: 1000; transition: all 0.3s ease;">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script>
+        // ===== PREMIUM ANIMATIONS FOR PROGRAMS PAGE =====
+        
+        $(document).ready(function() {
+            // Scroll animations
+            setupScrollAnimations();
+            
+            // Back to top button
+            setupBackToTop();
+            
+            // Smooth scroll for anchor links
+            setupSmoothScroll();
+            
+            // Hover animations for cards
+            setupCardAnimations();
+            
+            // Initialize animations
+            animateOnScroll();
+            
+            // Parallax effect
+            setupParallaxEffect();
+        });
+        
+        // Scroll animations
+        function setupScrollAnimations() {
+            function animateOnScroll() {
+                $('.reveal').each(function() {
+                    if ($(this).visible(true)) {
+                        $(this).addClass('active');
+                    }
+                });
+                
+                // Stagger animation for value cards
+                $('.stagger-item').each(function(index) {
+                    if ($(this).visible(true)) {
+                        setTimeout(() => {
+                            $(this).addClass('active');
+                        }, index * 200);
+                    }
+                });
+            }
+            
+            // Initial animation
+            animateOnScroll();
+            
+            // Animate on scroll
+            $(window).on('scroll', animateOnScroll);
+        }
+        
+        // Back to top button
+        function setupBackToTop() {
+            const $backToTop = $('#backToTop');
+            
+            $backToTop.click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+            
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $backToTop.fadeIn();
+                } else {
+                    $backToTop.fadeOut();
+                }
+            });
+        }
+        
+        // Smooth scroll
+        function setupSmoothScroll() {
+            $('a[href^="#"]').on('click', function(event) {
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
+        }
+        
+        // Card hover animations
+        function setupCardAnimations() {
+            $('.program-feature, .benefit-card, .program-info-item').each(function() {
+                $(this).hover(
+                    function() {
+                        $(this).css('transform', $(this).data('original-transform'));
+                    },
+                    function() {
+                        $(this).css('transform', '');
+                    }
+                );
+            });
+            
+            // Image hover effects
+            $('.program-detail-image').hover(
+                function() {
+                    $(this).css('transform', 'translateY(-10px)');
+                },
+                function() {
+                    $(this).css('transform', 'translateY(0)');
+                }
+            );
+            
+            // Program icon hover
+            $('.program-feature').hover(
+                function() {
+                    $(this).find('.program-icon').css({
+                        'transform': 'scale(1.1)',
+                        'background': 'linear-gradient(135deg, var(--primary), var(--primary-light))',
+                        'color': 'white'
+                    });
+                },
+                function() {
+                    $(this).find('.program-icon').css({
+                        'transform': 'scale(1)',
+                        'background': 'linear-gradient(135deg, var(--light), white)',
+                        'color': 'var(--primary)'
+                    });
+                }
+            );
+            
+            // Benefit icon hover
+            $('.benefit-card').hover(
+                function() {
+                    $(this).find('.benefit-icon').css({
+                        'transform': 'scale(1.1)',
+                        'background': 'var(--primary-light)',
+                        'color': 'var(--dark)'
+                    });
+                },
+                function() {
+                    $(this).find('.benefit-icon').css({
+                        'transform': 'scale(1)',
+                        'background': 'white',
+                        'color': 'var(--primary)'
+                    });
+                }
+            );
+        }
+        
+        // Parallax effect
+        function setupParallaxEffect() {
+            $(window).scroll(function() {
+                const scrolled = $(this).scrollTop();
+                $('.shape-1').css('transform', `translate(${scrolled * 0.015}px, ${scrolled * 0.02}px)`);
+                $('.shape-2').css('transform', `translate(${scrolled * -0.01}px, ${scrolled * 0.015}px)`);
+                $('.shape-3').css('transform', `translate(${scrolled * 0.01}px, ${scrolled * -0.01}px)`);
+                
+                // Floating elements
+                $('.floating-element').each(function() {
+                    const speed = 0.02;
+                    $(this).css('transform', `translateY(${scrolled * speed}px)`);
+                });
+            });
+        }
+        
+        // Visibility check function
+        $.fn.visible = function(partial) {
+            const $t = $(this);
+            const $w = $(window);
+            const viewTop = $w.scrollTop();
+            const viewBottom = viewTop + $w.height();
+            const _top = $t.offset().top;
+            const _bottom = _top + $t.height();
+            const compareTop = partial === true ? _bottom : _top;
+            const compareBottom = partial === true ? _top : _bottom;
+            
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+    </script>
 </body>
 </html>
