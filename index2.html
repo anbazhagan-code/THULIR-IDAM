@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anbu-Kiki Valentine 💖 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --pink-heart: #ff2d75;
+            --pink-light: #ff7eb3;
+            --pink-lighter: #ffc2d6;
+            --gold: #ffd700;
+            --red-tamil: #c21807;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Noto Sans Tamil', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a1c4fd);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            padding: 20px;
+            position: relative;
+        }
+        
+        /* Floating elements */
+        .floating-heart {
+            position: fixed;
+            font-size: 24px;
+            color: var(--pink-heart);
+            opacity: 0.7;
+            z-index: -1;
+            animation: floatAround 15s infinite linear;
+        }
+        
+        .floating-kolam {
+            position: fixed;
+            font-size: 30px;
+            color: var(--gold);
+            opacity: 0.4;
+            z-index: -1;
+            animation: floatAround 20s infinite linear reverse;
+        }
+        
+        @keyframes floatAround {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, 100px) rotate(90deg); }
+            50% { transform: translate(0, 200px) rotate(180deg); }
+            75% { transform: translate(-100px, 100px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        /* Main container */
+        .main-container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            animation: fadeInScale 1.5s ease-out;
+            border: 8px solid var(--pink-heart);
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Header section */
+        .header-section {
+            background: linear-gradient(to right, var(--pink-heart), var(--pink-light));
+            padding: 25px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .header-title {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .anbu-kiki-badge {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--red-tamil);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transform: rotate(5deg);
+            box-shadow: 3px 3px 0px var(--red-tamil);
+            z-index: 10;
+        }
+        
+        /* Content sections */
+        .content-section {
+            padding: 30px;
+        }
+        
+        .heart-divider {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2rem;
+            color: var(--pink-heart);
+        }
+        
+        /* Kavithai section */
+        .kavithai-box {
+            background: linear-gradient(135deg, #fff5f7, #ffe8f0);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 8px solid var(--red-tamil);
+            margin-bottom: 30px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .kavithai-title {
+            color: var(--red-tamil);
+            font-family: 'Noto Sans Tamil', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .kavithai-text {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #5a0a1e;
+            text-align: center;
+        }
+        
+        .kavithai-icon {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--pink-heart);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 3px 3px 0px var(--gold);
+        }
+        
+        /* Question section */
+        .question-box {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            border: 4px dashed var(--pink-light);
+            position: relative;
+        }
+        
+        .question-text {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            font-size: 2rem;
+            color: var(--pink-heart);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px var(--pink-lighter);
+        }
+        
+        .question-icon {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 15px;
+            font-size: 2rem;
+        }
+        
+        /* Buttons */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .valentine-btn {
+            padding: 18px 40px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 200px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .valentine-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+        
+        .valentine-btn:hover:before {
+            left: 100%;
+        }
+        
+        .yes-btn {
+            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px rgba(76, 175, 80, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(139, 195, 74, 0.8); }
+            100% { box-shadow: 0 0 15px rgba(76, 175, 80, 0.5); }
+        }
+        
+        .no-btn {
+            background: linear-gradient(to right, #FF5252, #FF8A80);
+            color: white;
+            transition: all 0.2s ease;
+        }
+        
+        .no-btn:hover {
+            transform: translateY(-5px);
+        }
+        
+        .no-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* After yes section */
+        .after-yes-section {
+            display: none;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease-out;
+            text-align: center;
+        }
+        
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .celebration-text {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            font-size: 2.5rem;
+            color: var(--pink-heart);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px var(--gold);
+            animation: colorChange 3s infinite alternate;
+        }
+        
+        @keyframes colorChange {
+            0% { color: var(--pink-heart); }
+            100% { color: var(--red-tamil); }
+        }
+        
+        .photos-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .photo-frame {
+            width: 200px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border: 5px solid white;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+        
+        .photo-frame:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+        
+        .photo-frame:before {
+            content: '💖';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--pink-heart);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 10;
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ffc2d6, #ff9a9e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        /* No overlay */
+        .no-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 20, 87, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: overlayFadeIn 0.5s ease;
+        }
+        
+        @keyframes overlayFadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .no-message-box {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: popShake 0.8s ease;
+        }
+        
+        @keyframes popShake {
+            0% { transform: scale(0.5) rotate(0); }
+            50% { transform: scale(1.1) rotate(5deg); }
+            70% { transform: rotate(-5deg); }
+            100% { transform: scale(1) rotate(0); }
+        }
+        
+        .no-message-text {
+            font-family: 'Noto Sans Tamil', sans-serif;
+            font-size: 1.8rem;
+            color: var(--red-tamil);
+            margin-bottom: 20px;
+        }
+        
+        .no-message-subtext {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        
+        .no-close-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: var(--pink-heart);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .no-close-btn:hover {
+            background: var(--red-tamil);
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        .footer-text {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-title { font-size: 2rem; }
+            .kavithai-text { font-size: 1.2rem; }
+            .question-text { font-size: 1.6rem; }
+            .valentine-btn { min-width: 160px; padding: 15px 30px; }
+            .celebration-text { font-size: 1.8rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .header-title { font-size: 1.7rem; }
+            .kavithai-text { font-size: 1.1rem; }
+            .buttons-container { gap: 15px; }
+            .valentine-btn { width: 100%; max-width: 250px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating elements -->
+    <div id="floatingElements"></div>
+    
+    <!-- Main container -->
+     <div class="anbu-kiki-badge">Anbu-Kiki 💘</div>
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header-section">
+            
+            <h1 class="header-title">Will You Be My Valentine?</h1>
+        </div>
+        
+        <!-- Content -->
+        <div class="content-section">
+            
+            <div class="heart-divider">
+                <i class="fas fa-heartbeat"></i> 
+                <i class="fas fa-heart"></i> 
+                <i class="fas fa-heartbeat"></i>
+            </div>
+            
+            <!-- Question section -->
+            <div class="question-box">
+                <div class="question-icon">💌</div>
+                <h2 class="question-text mt-3">Will You Be My Valentine?</h2>
+                <p style="color: #666; margin-bottom: 10px;">(Choose your answer with love 😉)</p>
+                
+                <!-- Buttons -->
+                <div class="buttons-container">
+                    <button id="yesBtn" class="valentine-btn yes-btn">
+                        <i class="fas fa-heart"></i> Yes! 💙
+                    </button>
+                    <button id="noBtn" class="valentine-btn no-btn">
+                        <i class="fas fa-times"></i> No 😪
+                    </button>
+                </div>
+            </div>
+            
+            <!-- After yes section -->
+            <div id="afterYes" class="after-yes-section">
+                <h2 class="celebration-text">
+                    Nandri di Thangoooo... Nee vandhadhum en vazhkai full-ah change aayiduchu! 💕
+                </h2>
+
+                <p style="font-size: 1.2rem; color: #ff4081; margin-bottom: 20px; font-weight: 500;">
+                    Ippo en world-la nee dhaan heroine, nee dhaan happiness, nee dhaan ellam! 💖
+                </p>
+
+                <div class="photos-container">
+                    <div class="photo-frame">
+                        <img src="https://media.tenor.com/5XOehZUJ1MAAAAAj/cute-cat-couple.gif" 
+                            alt="Memory 1" class="love-gif">
+                    </div>
+
+                    <div class="photo-frame">
+                        <img src="https://media.tenor.com/7nOlQImeZ44AAAAj/love-love-you.gif" 
+                            alt="Memory 2" class="love-gif">
+                    </div>
+
+                    <div class="photo-frame">
+                        <img src="https://c.tenor.com/5T24_rbk7vYAAAAd/tenor.gif" 
+                            alt="Memory 3" 
+                            style="height: -webkit-fill-available;" 
+                            class="love-gif">
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #fff5f7, #ffe4ec); border-radius: 20px; box-shadow: 0 10px 25px rgba(255, 64, 129, 0.2);">
+
+                    <h4 style="color: var(--pink-heart); margin-bottom: 15px; font-size: 1rem;">
+                        <i class="fas fa-star"></i> En Valentine-ku en manasula irundhu oru promise:
+                    </h4>
+
+                    <p style="font-family: 'Noto Sans Tamil', sans-serif; font-size: 12px; color: #5a0a1e; line-height: 1.8;">
+                        "Un sirippu dhaan en energy 💫 <br> 
+                        Un azhagu dhaan en weakness 😌   <br> 
+                        Un kooda irukkara ovvoru nimishamum enakku treasure 💎  <br>  
+                        Unnai endrum safe-ah, happy-ah veppen…   <br> 
+                        Eppovum un pakkathula dhaan iruppen 🤍   <br> 
+                        Idhu just oru promise illa…   <br> 
+                        Idhu en heart-la irundhu varra Anbu-Kiki lifetime commitment! 💍💝"
+                    </p>
+                </div>
+
+            </div>
+
+            
+            <!-- Footer -->
+            <div class="footer-text">
+                Made with <i class="fas fa-heart" style="color: var(--pink-heart);"></i> for my special Valentine | Anbu-Kiki
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Create floating elements
+        function createFloatingElements() {
+            const container = document.getElementById('floatingElements');
+            const hearts = ['💖', '💕', '💘', '💗', '💓', '💞', '💝'];
+            const kolams = ['🌸', '🌺', '🏵️', '💮', '🔆', '✨', '🌟'];
+            
+            // Create floating hearts
+            for (let i = 0; i < 25; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = `${Math.random() * 100}%`;
+                heart.style.animationDuration = `${15 + Math.random() * 20}s`;
+                heart.style.fontSize = `${20 + Math.random() * 20}px`;
+                container.appendChild(heart);
+            }
+            
+            // Create floating kolam elements
+            for (let i = 0; i < 15; i++) {
+                const kolam = document.createElement('div');
+                kolam.className = 'floating-kolam';
+                kolam.innerHTML = kolams[Math.floor(Math.random() * kolams.length)];
+                kolam.style.left = `${Math.random() * 100}%`;
+                kolam.style.top = `${Math.random() * 100}%`;
+                kolam.style.animationDuration = `${20 + Math.random() * 25}s`;
+                kolam.style.fontSize = `${25 + Math.random() * 25}px`;
+                container.appendChild(kolam);
+            }
+        }
+        
+        // DOM elements
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const afterYesSection = document.getElementById('afterYes');
+        const noOverlay = document.getElementById('noOverlay');
+        const closeNoBtn = document.getElementById('closeNoBtn');
+        
+        // Yes button click
+        yesBtn.addEventListener('click', function() {
+            // Show celebration section
+            afterYesSection.style.display = 'block';
+            
+            // Change button text and disable
+            yesBtn.innerHTML = '<i class="fas fa-heart"></i> Enaku Theriyu nee Yes solluva nu....<br>I Love Youuuuu! 💙';
+            yesBtn.style.background = 'linear-gradient(to right, #FF4081, #F50057)';
+            yesBtn.style.fontSize = '1rem';
+            yesBtn.disabled = true;
+
+            
+            // Hide no button
+            noBtn.style.display = 'none';
+            
+            // Create celebration effect
+            createCelebration();
+            
+            // Scroll to celebration section
+            afterYesSection.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // No button click - with fun movement
+        let noClickCount = 0;
+        const maxMoves = 1000;
+
+        // Function to move button randomly
+        function moveNoButton() {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 20);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 20);
+
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+            noBtn.style.transition = 'all 0.3s ease';
+            noBtn.style.fontSize = '1rem';
+        }
+
+        // Mobile + Desktop support
+        noBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            if (noClickCount < maxMoves) {
+                moveNoButton();
+                noClickCount++;
+
+               const messages = [
+                'Ayyayo try panna vendam 😜',
+                'No ku vaipu illa 😉',
+                'Innum yosichu paaru 😌',
+                'Escape aagiduchu 😂',
+                'Catch panna mudiyuma? 😏',
+                'Ithu unakku set aagathu 😆',
+                'Wrong option madam 😌',
+                'No button working illa 🤭',
+                'Konjam brain use pannunga 😜',
+                'Yes dhaan correct answer 😏',
+                'Retry pannunga please 😂',
+                'Appo love illa nu arthama? 😱',
+                'Seri seri serious ah yosichu paaru 😌',
+                'Nee click panna naan move aaguren 💃',
+                'Mission impossible da idhu 😎',
+                'Level easy nu nenacha? 😏',
+                'Idhu trap ma 😜',
+                'Yes dhaan destiny 💖',
+                'Un finger slow da 😆',
+                'Catch me if you can 😏',
+                'Idhu love test 😌',
+                'Unakku ore option dhaan 😉',
+                'Escape button activated 🚀',
+                'Love ku No illa 😜',
+                'Think twice kutty 😌',
+                'Game over for No 😂'
+            ];
+
+
+                noBtn.innerHTML = `<i class="fas fa-times"></i> ${messages[Math.floor(Math.random() * messages.length)]}`;
+            } else {
+                noOverlay.style.display = 'flex';
+            }
+        });
+
+        
+        noBtn.addEventListener('click', function() {
+            // Show the no overlay
+            noOverlay.style.display = 'flex';
+            
+            // Play a sound effect (if we had one)
+            // For now, we'll just log
+            console.log("No button clicked - showing fun message!");
+        });
+        
+        // Close no overlay
+        closeNoBtn.addEventListener('click', function() {
+            noOverlay.style.display = 'none';
+            
+            // Reset no button position
+            noBtn.style.position = '';
+            noBtn.style.left = '';
+            noBtn.style.top = '';
+            noBtn.innerHTML = '<i class="fas fa-times"></i> No 🙈';
+        });
+        
+        // Celebration effect
+        function createCelebration() {
+            const container = document.getElementById('floatingElements');
+            
+            // Add more hearts
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '💖';
+                    heart.style.position = 'fixed';
+                    heart.style.left = `${Math.random() * 100}%`;
+                    heart.style.top = `${Math.random() * 100}%`;
+                    heart.style.fontSize = `${30 + Math.random() * 30}px`;
+                    heart.style.zIndex = '9999';
+                    heart.style.opacity = '0.9';
+                    heart.style.pointerEvents = 'none';
+                    
+                    // Animation
+                    heart.style.animation = `floatAround ${3 + Math.random() * 4}s linear forwards`;
+                    
+                    container.appendChild(heart);
+                    
+                    // Remove after animation
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 7000);
+                }, i * 100);
+            }
+        }
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingElements();
+            
+            // Add a fun title change
+            let originalTitle = document.title;
+            let changed = false;
+            
+            setInterval(() => {
+                if (!changed) {
+                    document.title = "💖 YES Solluuu! 💖";
+                    changed = true;
+                } else {
+                    document.title = originalTitle;
+                    changed = false;
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
