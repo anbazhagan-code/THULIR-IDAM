@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>THULIR.IDAM | Emotional Wellness Space | Nandhini Rajendran</title>
+    <meta name="description" content="Nandhini Rajendran - Mental Health Counsellor in Coimbatore. Safe, non-judgmental space for stress, overthinking, self doubt, burnout. Online & in-person sessions. Book now.">
+    
+    <!-- Preconnect & Fonts: Poppins + Cormorant Garamond as brand fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ========== BRAND COLORS: GREEN #1D6944 + YELLOW #FFFFDC ========== */
+        :root {
+            --primary: #1D6944;
+            --primary-dark: #145233;
+            --primary-soft: #edf7ef;
+            --yellow-soft: #FFFFDC;
+            --pure-white: #ffffff;
+            --ink: #1a2e25;
+            --grey-mild: #5a6e66;
+            --border-light: #e2ebe6;
+        }
+
+        /* Global fonts */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--pure-white);
+            color: var(--ink);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .logo, .tagline, .navbar-brand, .section-title, .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        /* navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.02);
+            padding: 1rem 0;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar-brand img {
+            height: 48px;
+            width: auto;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #2c4438;
+            margin: 0 0.5rem;
+            transition: 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 600;
+            transition: 0.25s ease;
+            box-shadow: 0 4px 12px rgba(29,105,68,0.25);
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 22px -8px rgba(29,105,68,0.4);
+        }
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 60px;
+            padding: 10px 28px;
+            font-weight: 600;
+            background: transparent;
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .badge-leaf {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #FEFCF5 0%, #F6FBF4 100%);
+        }
+        .hero-title {
+            font-size: 3.6rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .highlight {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+        }
+
+        /* cards */
+        .service-card-mini, .why-card, .step-card, .audience-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px 24px;
+            transition: all 0.25s;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+            height: 100%;
+            text-align: center;
+        }
+        .service-card-mini:hover, .why-card:hover, .step-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 30px -12px rgba(29,105,68,0.12);
+        }
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .section-sub {
+            color: var(--grey-mild);
+            max-width: 680px;
+            margin-bottom: 48px;
+        }
+
+        /* about photo */
+        .about-img {
+            border-radius: 32px;
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+            width: 100%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+        .confidential-note {
+            background: var(--primary-soft);
+            border-radius: 28px;
+            padding: 24px 32px;
+            border-left: 6px solid var(--primary);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            transition: 0.2s;
+            border: 1px solid var(--border-light);
+        }
+        .footer {
+            background-color: #FBFDF9;
+            border-top: 1px solid var(--border-light);
+            padding: 60px 0 30px;
+        }
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-soft);
+            border-radius: 50%;
+            color: var(--primary);
+            margin-right: 12px;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #25D366;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+            z-index: 99;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            background: #128C7E;
+        }
+        .row.align-items-center {
+            align-items: center;
+        }
+        section {
+            overflow-x: hidden;
+        }
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.4rem; }
+            .section-title { font-size: 2rem; }
+            .hero { padding: 130px 0 70px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="THULIR.IDAM Logo"> THULIR<span style="color: #1D6944;">.</span>IDAM
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary" href="https://wa.me/917010669191?text=Hello%2C%20I%20want%20to%20book%20a%20session%20at%20THULIR.IDAM" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>Book Session
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- SERVICES SECTION - "What We Do" (removed Simple Overview, yellow background) -->
+<section id="services" class="py-5">
+
+</section>
+
+<!-- DETAILED SERVICES SECTION: 1:1 COUNSELLING + WORKSHOPS (full details, pricing) -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- 1:1 Counselling Card -->
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="border rounded-4 p-4 shadow-sm h-100 bg-white">
+                    <i class="fas fa-user-circle fa-3x mb-3" style="color: var(--primary);"></i>
+                    <h3 class="h2 mb-3">1:1 Counselling</h3>
+                    <p>A safe and supportive space to talk about what you’re going through—whether it’s stress, overthinking, emotional struggles, or feeling stuck. These sessions are focused on helping you understand yourself better, gain clarity, and find healthier ways to handle thoughts and emotions.</p>
+                    <h5 class="mt-4"><i class="fas fa-users me-2"></i> Who is this for?</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i> Students (academic stress, exam pressure, relationships)</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Professionals (work pressure, burnout)</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Anyone feeling overwhelmed, anxious, or emotionally stuck</li>
+                    </ul>
+                    <div class="bg-light p-3 rounded-3 mt-3">
+                        <div><strong>Session Details:</strong> Duration: 50–60 minutes · Mode: Online / In-person</div>
+                        <div class="fs-4 fw-bold text-success mt-2">INR 499 / session</div>
+                    </div>
+                    <div class="confidential-note mt-4 mb-4">
+                        <i class="fas fa-lock me-2"></i> <strong>ALL SESSIONS ARE CONFIDENTIAL AND CONDUCTED IN A SAFE, NON-JUDGEMENTAL SPACE.</strong>
+                    </div>
+                    <a href="https://wa.me/917010669191?text=I%20want%20to%20book%20a%201:1%20counselling%20session%20(INR%20499)" target="_blank" class="btn btn-primary w-100 py-3"><i class="fab fa-whatsapp me-2"></i> Book a Session →</a>
+                </div>
+            </div>
+            <!-- Emotional Wellbeing Workshops Card -->
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="border rounded-4 p-4 shadow-sm h-100 bg-white">
+                    <i class="fas fa-chalkboard-user fa-3x mb-3" style="color: var(--primary);"></i>
+                    <h3 class="h2 mb-3">Emotional Well-being Workshops</h3>
+                    <p>Interactive and practical sessions designed for schools, colleges, and organizations to support emotional well-being and mental health. These sessions help individuals understand emotions, manage stress, and build healthier coping mechanisms.</p>
+                    <h5 class="mt-3">Topics include:</h5>
+                    <div class="d-flex flex-wrap gap-2 my-3">
+                        <span class="badge-leaf">Stress Management</span>
+                        <span class="badge-leaf">Emotional awareness</span>
+                        <span class="badge-leaf">Overthinking</span>
+                        <span class="badge-leaf">Work-life balance</span>
+                        <span class="badge-leaf">Self-awareness & personal growth</span>
+                    </div>
+                    <p class="mt-2">Each session is customized based on audience & requirement.</p>
+                    <div class="mt-4 pt-2">
+                        <a href="mailto:thuliridam2025@gmail.com?subject=Enquiry%20about%20Emotional%20Wellbeing%20Workshop" class="btn btn-outline-primary w-100 py-3"><i class="far fa-envelope me-2"></i> Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="footer-logo fw-bold fs-3" style="font-family:'Cormorant Garamond'"><img src="images/logo.png" alt="THULIR.IDAM Logo" style="height: 50px; width: auto;"> THULIR.IDAM</div>
+                <p class="text-muted mt-2">a home for your inner self – pause, heal, grow.</p>
+                <div class="mt-3">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/917010669191" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5 class="fw-bold">Contact</h5>
+                <ul class="list-unstyled text-muted">
+                    <li class="mb-2"><i class="far fa-envelope me-2" style="color: var(--primary);"></i> thuliridam2025@gmail.com</li>
+                    <li class="mb-2"><i class="fas fa-phone-alt me-2" style="color: var(--primary);"></i> +91 7010669191</li>
+                    <li><i class="fab fa-whatsapp me-2" style="color: var(--primary);"></i> WhatsApp: 7010669191</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold">Session Mode</h5>
+                <p><i class="fas fa-video me-2"></i> Online (anywhere) <br> <i class="fas fa-building me-2"></i> In-person (Coimbatore)</p>
+                <span class="badge-leaf">Mon–Sat: 9am – 7pm</span>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center small text-secondary">© 2025 THULIR.IDAM — Emotional Wellness Space. All rights reserved.</div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp CTA -->
+<a href="https://wa.me/917010669191?text=Hello%2C%20I%20want%20to%20book%20a%20session%20at%20THULIR.IDAM" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true, offset: 20 });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === "#" || targetId === "") return;
+            const target = document.querySelector(targetId);
+            if(target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
