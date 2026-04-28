@@ -66,7 +66,7 @@
             color: var(--primary-dark);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 2px;
         }
         .navbar-brand img {
             height: 48px;
@@ -143,7 +143,7 @@
             border: 1px solid var(--border-light);
             box-shadow: 0 8px 20px rgba(0,0,0,0.02);
             height: 100%;
-            text-align: center;
+            /* text-align: center; */
         }
         .service-card-mini:hover, .why-card:hover, .step-card:hover {
             transform: translateY(-6px);
@@ -234,10 +234,16 @@
         section {
             overflow-x: hidden;
         }
+        .why-card .fas {
+            margin-bottom: 12px;
+        }
         @media (max-width: 768px) {
             .hero-title { font-size: 2.4rem; }
             .section-title { font-size: 2rem; }
             .hero { padding: 130px 0 70px; }
+        }
+        @media (max-width: 768px) {
+            .btn-primary { font-size: 1rem; }
         }
     </style>
 </head>
@@ -260,7 +266,7 @@
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 <li class="nav-item ms-lg-3">
                     <a class="btn btn-primary" href="https://wa.me/917010669191?text=Hello%2C%20I%20want%20to%20book%20a%20session%20at%20THULIR.IDAM" target="_blank">
-                        <i class="fab fa-whatsapp me-2"></i>Book Session
+                        <i class="fab fa-whatsapp me-2"></i>Begin Healing
                     </a>
                 </li>
             </ul>
@@ -282,11 +288,11 @@
                 <div class="mt-4 small text-secondary"><i class="fas fa-shield-alt text-success me-1"></i> Confidential, safe & non-judgmental · Online / In-person</div>
             </div>
             <div class="col-lg-5 text-center" data-aos="fade-left">
-                <!-- Calm counselling support image added -->
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
-                     alt="Compassionate counselling support" 
-                     class="img-fluid rounded-5 shadow" 
-                     style="max-width: 100%; border-radius: 32px; object-fit: cover; height: auto;">
+                <div class="bg-white rounded-5 shadow p-4 d-inline-block" style="border: 1px solid var(--primary-soft);">
+                    <i class="fas fa-leaf" style="font-size: 80px; color: var(--primary);"></i>
+                    <div class="mt-3 fw-semibold fs-5">A home for your Inner self</div>
+                    <div class="text-muted small">pause · heal · grow</div>
+                </div>
             </div>
         </div>
     </div>
@@ -297,7 +303,7 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-md-6" data-aos="fade-right">
-                <span class="badge-leaf">why choose us</span>
+                <span class="badge-leaf">Why choose us</span>
                 <h2 class="section-title mt-2">Why Thulir.<span style="color: var(--primary);">Idam</span>?</h2>
                 <div class="mt-4">
                     <div class="why-card mb-3"><i class="fas fa-shield-heart fa-xl me-3" style="color: var(--primary);"></i> <strong>A safe and non-judgmental space</strong> — speak freely, without labels.</div>
@@ -308,8 +314,8 @@
                 </div>
             </div>
             <div class="col-md-6" data-aos="fade-left">
-                <span class="badge-leaf">path to clarity</span>
-                <h2 class="section-title mt-2">How It Works</h2>
+                <span class="badge-leaf">A space to feel heard</span>
+                <h2 class="section-title mt-2">What you'll experiences</h2>
                 <div class="mt-4">
                     <div class="step-card d-flex mb-3 align-items-start"><div class="me-3 fs-2">🌱</div><div><h5 class="mb-1">A safe space to talk & feel heard</h5><p class="text-muted">Experience deep listening without judgment.</p></div></div>
                     <div class="step-card d-flex mb-3 align-items-start"><div class="me-3 fs-2">🧠</div><div><h5 class="mb-1">Understanding your thoughts & emotions</h5><p class="text-muted">Explore what’s beneath the surface.</p></div></div>
@@ -329,7 +335,7 @@
             <h2 class="section-title">Designed For</h2>
         </div>
         <div class="row g-3 mt-3">
-            <div class="col-md-4"><div class="audience-card"><i class="fas fa-graduation-cap fa-lg me-2" style="color: var(--primary);"></i> Students dealing with stress, anxiety, academic pressure</div></div>
+            <div class="col-md-4"><div class="audience-card"><i class="fas fa-graduation-cap fa-lg me-2" style="color: var(--primary);"></i> Students dealing with stress, relationship issues, academic pressure</div></div>
             <div class="col-md-4"><div class="audience-card"><i class="fas fa-cloud-rain fa-lg me-2" style="color: var(--primary);"></i> Individuals experiencing overthinking or emotional overwhelm</div></div>
             <div class="col-md-4"><div class="audience-card"><i class="fas fa-briefcase fa-lg me-2" style="color: var(--primary);"></i> Professionals facing burnout or work-life imbalance</div></div>
             <div class="col-md-4"><div class="audience-card"><i class="fas fa-heart fa-lg me-2" style="color: var(--primary);"></i> Anyone seeking clarity, self-awareness & emotional growth</div></div>
@@ -380,7 +386,7 @@
                 <div class="bg-white rounded-4 p-4 shadow-sm">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <img src="images/logo.png" alt="THULIR.IDAM Logo" style="height: 69px; width: auto;">
-                        <div><span class="fw-bold fs-2" style="font-family: 'Cormorant Garamond';">THULIR.IDAM</span><br><span class="badge-leaf">a home for your inner self</span></div>
+                        <div><span class="fw-bold fs-2" style="font-family: 'Cormorant Garamond';">THULIR.IDAM</span><br><span class="badge-leaf">A home for your Inner self</span></div>
                     </div>
                     <h4 class="mt-3">About Thulir.Idam</h4>
                     <p>Thulir.Idam is a safe and supportive space where you can pause, heal and grow. Created for people dealing with everyday challenges like stress, overthinking, emotional struggles, relationship concerns, or simply feeling overwhelmed. Here, you don’t have to worry about being judged or labelled. The focus is on helping you understand yourself better, feel more balanced, and handle life with more clarity and confidence.</p>
@@ -390,7 +396,7 @@
                 <div class="text-center">
                     <img src="https://placehold.co/600x600/eef7f0/1D6944?text=Nandhini+Rajendran&font=playfair" alt="Nandhini Rajendran - Counsellor" class="about-img img-fluid" style="max-width: 280px; border-radius: 40px;">
                     <h4 class="mt-4">Nandhini Rajendran</h4>
-                    <p class="text-muted">Mental Health Counsellor & Emotional Wellness Facilitator | Founder & Director</p>
+                    <p class="text-muted">Mental Health Counsellor & Emotional Wellness Facilitator</p>
                     <p class="small">I work with students and professionals navigating stress, overthinking, emotional challenges, and phases of feeling stuck. My aim is to create a safe, comfortable space where you can talk openly and understand yourself better. My approach is person-centered, supporting you in a way that works best for you.</p>
                 </div>
             </div>
@@ -429,7 +435,7 @@
         </div>
         <div class="text-center mt-5">
             <h4 class="mb-3">Begin your healing journey today</h4>
-            <a href="https://wa.me/917010669191?text=Hello%20THULIR.IDAM,%20I%20would%20like%20to%20book%20a%20session." target="_blank" class="btn btn-primary btn-lg px-5"><i class="fab fa-whatsapp me-2"></i> Book a Session (WhatsApp)</a>
+            <a href="https://wa.me/917010669191?text=Hello%20THULIR.IDAM,%20I%20would%20like%20to%20book%20a%20session." target="_blank" class="btn btn-primary btn-lg px-5"><i class="fab fa-whatsapp me-2"></i> Start Your Journey Now</a>
             <p class="mt-3 text-muted small">After booking, you will be guided with session details and confirmation via WhatsApp.</p>
         </div>
     </div>
@@ -441,7 +447,7 @@
         <div class="row g-4">
             <div class="col-md-5">
                 <div class="footer-logo fw-bold fs-3" style="font-family:'Cormorant Garamond'"><img src="images/logo.png" alt="THULIR.IDAM Logo" style="height: 50px; width: auto;"> THULIR.IDAM</div>
-                <p class="text-muted mt-2">a home for your inner self – pause, heal, grow.</p>
+                <p class="text-muted mt-2">A home for your Inner self – pause, heal, grow.</p>
                 <div class="mt-3">
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
@@ -459,7 +465,7 @@
             <div class="col-md-4">
                 <h5 class="fw-bold">Session Mode</h5>
                 <p><i class="fas fa-video me-2"></i> Online (anywhere) <br> <i class="fas fa-building me-2"></i> In-person (Coimbatore)</p>
-                <span class="badge-leaf">Mon–Sat: 9am – 7pm</span>
+                <span class="badge-leaf">Mon–Sat: 10am – 7pm</span>
             </div>
         </div>
         <hr class="my-4">
